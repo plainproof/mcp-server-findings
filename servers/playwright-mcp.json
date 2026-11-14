@@ -1,0 +1,150 @@
+{
+  "slug": "playwright-mcp",
+  "name": "Playwright MCP (Microsoft)",
+  "repository": "https://github.com/microsoft/playwright-mcp",
+  "repository_at_selection": null,
+  "path_in_repository": null,
+  "publisher": "microsoft",
+  "publisher_account_type": "Organization",
+  "package": "npm:@playwright/mcp",
+  "license_spdx": "Apache-2.0",
+  "upstream_status": "active",
+  "upstream_status_note": null,
+  "upstream_status_source": [
+    "https://api.github.com/repos/microsoft/playwright-mcp"
+  ],
+  "latest_release": {
+    "version": "0.0.85",
+    "date": "2026-11-09",
+    "source": "https://registry.npmjs.org/@playwright/mcp/latest"
+  },
+  "default_branch": "main",
+  "commit": "78eca85361efb545a4c0f59b6140aef0721c5412",
+  "commit_date": "2026-11-11",
+  "stars": 39634,
+  "verified": "2026-11-14",
+  "outcome": "criteria-met",
+  "outcome_statement": "As of 2026-11-14: meets C1, C2, C3, C4, C6, C8, C10; partly meets C5, C7, C9.",
+  "results": {
+    "C1": "meets",
+    "C2": "meets",
+    "C3": "meets",
+    "C4": "meets",
+    "C5": "partly meets",
+    "C6": "meets",
+    "C7": "partly meets",
+    "C8": "meets",
+    "C9": "partly meets",
+    "C10": "meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "meets",
+      "finding": "The npm record for @playwright/mcp@0.0.85 names the repository `git+https://github.com/microsoft/playwright-mcp.git` and carries a provenance attestation (`dist.attestations`).",
+      "sources": [
+        "https://registry.npmjs.org/@playwright/mcp/latest"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "meets",
+      "finding": "GitHub shows a security policy for the repository (`SECURITY.md` in the repository), and it describes how to report a vulnerability.",
+      "sources": [
+        "https://github.com/microsoft/playwright-mcp/security/policy"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "meets",
+      "finding": "The repository is not archived and the package is not marked deprecated. Latest release 0.0.85 is dated 2026-11-09; the newest commit on `main` is dated 2026-11-11; GitHub reports the last push on 2026-11-13.",
+      "sources": [
+        "https://api.github.com/repos/microsoft/playwright-mcp",
+        "https://registry.npmjs.org/@playwright/mcp/latest",
+        "https://github.com/microsoft/playwright-mcp/commits/main"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "No advisory is published in the repository's advisory list.",
+      "sources": [
+        "https://github.com/microsoft/playwright-mcp/security/advisories"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "partly meets",
+      "finding": "Browser automation is the core function; the README documents file-access restriction by default, origin allow and block lists, and capabilities that must be switched on, and says the origin lists are not a security boundary. Quoted: “By default access to file system is restricted to workspace root directories (or cwd if no roots are configured) only, and navigation to file:// URLs is blocked.”.",
+      "sources": [
+        "https://github.com/microsoft/playwright-mcp/blob/78eca85361efb545a4c0f59b6140aef0721c5412/README.md?plain=1#L411"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "meets",
+      "finding": "The documented setup takes no credential; a secrets file option is documented. Quoted: “path to a file containing secrets in the dotenv format”.",
+      "sources": [
+        "https://github.com/microsoft/playwright-mcp/blob/78eca85361efb545a4c0f59b6140aef0721c5412/README.md?plain=1#L451"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "partly meets",
+      "finding": "The documented function is driving a browser to arbitrary pages. The README contains no reference to telemetry. Searched `README.md` for: telemetry, usage statistics, usage stats, we collect, data collection, opt-out, posthog. Quoted: “semicolon-separated list of TRUSTED origins to allow the browser to request. Default is to allow all.”.",
+      "sources": [
+        "https://github.com/microsoft/playwright-mcp/blob/78eca85361efb545a4c0f59b6140aef0721c5412/README.md?plain=1#L410",
+        "https://github.com/microsoft/playwright-mcp/blob/78eca85361efb545a4c0f59b6140aef0721c5412/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "meets",
+      "finding": "A lockfile (`package-lock.json`) and an update configuration (`.github/dependabot.yml`) are committed.",
+      "sources": [
+        "https://github.com/microsoft/playwright-mcp/blob/78eca85361efb545a4c0f59b6140aef0721c5412/package-lock.json",
+        "https://github.com/microsoft/playwright-mcp/blob/78eca85361efb545a4c0f59b6140aef0721c5412/.github/dependabot.yml"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "partly meets",
+      "finding": "The README carries a general security statement and a link to MCP security guidance; it does not name prompt injection or untrusted content. Quoted: “Playwright MCP is **not** a security boundary.”.",
+      "sources": [
+        "https://github.com/microsoft/playwright-mcp/blob/78eca85361efb545a4c0f59b6140aef0721c5412/README.md?plain=1#L861"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "meets",
+      "finding": "Declared MCP library: @modelcontextprotocol/sdk ^1.25.2 in the repository's package.json. Lower-bound version 1.25.2 of @modelcontextprotocol/sdk (npm) was published on 2026-01-07, within the 12 months before 2026-11-14.",
+      "sources": [
+        "https://github.com/microsoft/playwright-mcp/blob/78eca85361efb545a4c0f59b6140aef0721c5412/package.json?plain=1#L44",
+        "https://registry.npmjs.org/@modelcontextprotocol/sdk"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [],
+  "third_party_reports": [],
+  "not_reverified": []
+}

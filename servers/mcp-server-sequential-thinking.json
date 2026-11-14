@@ -1,0 +1,149 @@
+{
+  "slug": "mcp-server-sequential-thinking",
+  "name": "Sequential Thinking (reference server)",
+  "repository": "https://github.com/modelcontextprotocol/servers",
+  "repository_at_selection": null,
+  "path_in_repository": "src/sequentialthinking",
+  "publisher": "modelcontextprotocol",
+  "publisher_account_type": "Organization",
+  "package": "npm:@modelcontextprotocol/server-sequential-thinking",
+  "license_spdx": "NOASSERTION",
+  "upstream_status": "active",
+  "upstream_status_note": null,
+  "upstream_status_source": [
+    "https://api.github.com/repos/modelcontextprotocol/servers"
+  ],
+  "latest_release": {
+    "version": "2.1.1",
+    "date": "2026-11-04",
+    "source": "https://registry.npmjs.org/@modelcontextprotocol/server-sequential-thinking/latest"
+  },
+  "default_branch": "main",
+  "commit": "e1dc4b18dbb948921da37f3d4224a628730b43b0",
+  "commit_date": "2026-11-11",
+  "stars": 91986,
+  "verified": "2026-11-14",
+  "outcome": "criteria-met",
+  "outcome_statement": "As of 2026-11-14: meets C1, C2, C3, C4, C5, C6, C7, C9, C10; partly meets C8.",
+  "results": {
+    "C1": "meets",
+    "C2": "meets",
+    "C3": "meets",
+    "C4": "meets",
+    "C5": "meets",
+    "C6": "meets",
+    "C7": "meets",
+    "C8": "partly meets",
+    "C9": "meets",
+    "C10": "meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "meets",
+      "finding": "The npm record for @modelcontextprotocol/server-sequential-thinking@2.1.1 names the repository `git+https://github.com/modelcontextprotocol/servers.git` and carries a provenance attestation (`dist.attestations`).",
+      "sources": [
+        "https://registry.npmjs.org/@modelcontextprotocol/server-sequential-thinking/latest"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "meets",
+      "finding": "GitHub shows a security policy for the repository (`SECURITY.md` in the repository), and it describes how to report a vulnerability.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers/security/policy"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "meets",
+      "finding": "The repository is not archived and the package is not marked deprecated. Latest release 2.1.1 is dated 2026-11-04; the newest commit on `main` is dated 2026-11-11; GitHub reports the last push on 2026-11-12.",
+      "sources": [
+        "https://api.github.com/repos/modelcontextprotocol/servers",
+        "https://registry.npmjs.org/@modelcontextprotocol/server-sequential-thinking/latest",
+        "https://github.com/modelcontextprotocol/servers/commits/main"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "No advisory is published in the repository's advisory list for @modelcontextprotocol/server-sequential-thinking.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers/security/advisories"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "meets",
+      "finding": "The single tool records reasoning steps; no write, delete or execute capability on external resources is documented. Quoted: “Facilitates a detailed, step-by-step thinking process for problem-solving and analysis.”.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers/blob/e1dc4b18dbb948921da37f3d4224a628730b43b0/src/sequentialthinking/README.md?plain=1#L20"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "meets",
+      "finding": "The documented setup takes no credential. Searched `src/sequentialthinking/README.md` for: API_KEY, _TOKEN\\b, password.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers/blob/e1dc4b18dbb948921da37f3d4224a628730b43b0/src/sequentialthinking/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "meets",
+      "finding": "The README contains no reference to telemetry or usage collection, and the documented function contacts only the service the user configures. Searched `src/sequentialthinking/README.md` for: telemetry, usage statistics, usage stats, we collect, data collection, opt-out, posthog.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers/blob/e1dc4b18dbb948921da37f3d4224a628730b43b0/src/sequentialthinking/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "partly meets",
+      "finding": "A lockfile (`package-lock.json`) is committed. No Dependabot or Renovate configuration file exists at the paths listed in the methodology.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers/blob/e1dc4b18dbb948921da37f3d4224a628730b43b0/package-lock.json",
+        "https://github.com/modelcontextprotocol/servers/tree/e1dc4b18dbb948921da37f3d4224a628730b43b0"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "meets",
+      "finding": "The documented tool returns only values the server computes from the client's own input. Quoted: “Facilitates a detailed, step-by-step thinking process for problem-solving and analysis.”.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers/blob/e1dc4b18dbb948921da37f3d4224a628730b43b0/src/sequentialthinking/README.md?plain=1#L20"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "meets",
+      "finding": "Declared MCP library: @modelcontextprotocol/server ^2.3.1. Lower-bound version 2.3.1 of @modelcontextprotocol/server (npm) was published on 2026-10-05, within the 12 months before 2026-11-14.",
+      "sources": [
+        "https://registry.npmjs.org/@modelcontextprotocol/server-sequential-thinking/latest",
+        "https://registry.npmjs.org/@modelcontextprotocol/server"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [],
+  "third_party_reports": [],
+  "not_reverified": []
+}

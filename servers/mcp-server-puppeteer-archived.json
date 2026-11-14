@@ -1,0 +1,154 @@
+{
+  "slug": "mcp-server-puppeteer-archived",
+  "name": "Puppeteer (archived reference server)",
+  "repository": "https://github.com/modelcontextprotocol/servers-archived",
+  "repository_at_selection": null,
+  "path_in_repository": "src/puppeteer",
+  "publisher": "modelcontextprotocol",
+  "publisher_account_type": "Organization",
+  "package": "npm:@modelcontextprotocol/server-puppeteer",
+  "license_spdx": "MIT",
+  "upstream_status": "archived-upstream",
+  "upstream_status_note": "The repository is archived (read-only) on GitHub. The npm record marks the package deprecated. Quoted: “Archived and unmaintained; no security guarantees. See https://github.com/modelcontextprotocol/servers-archived”. The repository's own README says it is no longer maintained. Quoted: “This repository is archived and no longer maintained.”.",
+  "upstream_status_source": [
+    "https://api.github.com/repos/modelcontextprotocol/servers-archived"
+  ],
+  "latest_release": {
+    "version": "2025.5.12",
+    "date": "2025-05-12",
+    "source": "https://registry.npmjs.org/@modelcontextprotocol/server-puppeteer/latest"
+  },
+  "default_branch": "main",
+  "commit": "9be4674d1ddf8c469e6461a27a337eeb65f76c2e",
+  "commit_date": "2025-05-28",
+  "stars": 306,
+  "verified": "2026-11-14",
+  "outcome": "criteria-not-met",
+  "outcome_statement": "As of 2026-11-14: meets C4, C6; partly meets C1, C2, C7, C8, C9, C10; does not meet C3, C5.",
+  "results": {
+    "C1": "partly meets",
+    "C2": "partly meets",
+    "C3": "does not meet",
+    "C4": "meets",
+    "C5": "does not meet",
+    "C6": "meets",
+    "C7": "partly meets",
+    "C8": "partly meets",
+    "C9": "partly meets",
+    "C10": "partly meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "partly meets",
+      "finding": "The npm record for @modelcontextprotocol/server-puppeteer@2025.5.12 has no repository field; its deprecation notice names the archive repository. The record carries no provenance attestation. Quoted: “Archived and unmaintained; no security guarantees. See https://github.com/modelcontextprotocol/servers-archived”.",
+      "sources": [
+        "https://registry.npmjs.org/@modelcontextprotocol/server-puppeteer/latest",
+        "https://github.com/modelcontextprotocol/servers-archived"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "partly meets",
+      "finding": "GitHub shows a security policy for the repository (`SECURITY.md`); the policy says the repository is no longer covered by a vulnerability disclosure programme. Quoted: “This archived repository is no longer covered by our vulnerability disclosure program.”.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers-archived/security/policy",
+        "https://github.com/modelcontextprotocol/servers-archived/blob/9be4674d1ddf8c469e6461a27a337eeb65f76c2e/SECURITY.md?plain=1#L16"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "does not meet",
+      "finding": "The repository is archived (read-only) on GitHub. The npm record marks the package deprecated. Quoted: “Archived and unmaintained; no security guarantees. See https://github.com/modelcontextprotocol/servers-archived”. The repository's own README says it is no longer maintained. Quoted: “This repository is archived and no longer maintained.”. Latest release 2025.5.12 is dated 2025-05-12; the newest commit on `main` is dated 2025-05-28; GitHub reports the last push on 2025-05-28.",
+      "sources": [
+        "https://api.github.com/repos/modelcontextprotocol/servers-archived",
+        "https://registry.npmjs.org/@modelcontextprotocol/server-puppeteer/latest",
+        "https://github.com/modelcontextprotocol/servers-archived/commits/main",
+        "https://github.com/modelcontextprotocol/servers-archived/blob/9be4674d1ddf8c469e6461a27a337eeb65f76c2e/README.md?plain=1#L3"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "No advisory is published in the repository's advisory list for @modelcontextprotocol/server-puppeteer.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers-archived/security/advisories"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "does not meet",
+      "finding": "The README describes browser automation including JavaScript execution; the only documented restriction concerns browser launch options, and no option to restrict navigation or script execution was found. Searched `src/puppeteer/README.md` for: read-only, allowlist, restrict, blocked. Quoted: “This server enables LLMs to interact with web pages, take screenshots, and execute JavaScript in a real browser environment.”.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers-archived/blob/9be4674d1ddf8c469e6461a27a337eeb65f76c2e/src/puppeteer/README.md?plain=1#L3",
+        "https://github.com/modelcontextprotocol/servers-archived/blob/9be4674d1ddf8c469e6461a27a337eeb65f76c2e/src/puppeteer/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "meets",
+      "finding": "The documented setup takes no credential. Searched `src/puppeteer/README.md` for: API_KEY, _TOKEN\\b, password.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers-archived/blob/9be4674d1ddf8c469e6461a27a337eeb65f76c2e/src/puppeteer/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "partly meets",
+      "finding": "The documented function is driving a browser to arbitrary pages. The README contains no reference to telemetry. Searched `src/puppeteer/README.md` for: telemetry, usage statistics, usage stats, we collect, data collection, opt-out, posthog. Quoted: “This server enables LLMs to interact with web pages”.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers-archived/blob/9be4674d1ddf8c469e6461a27a337eeb65f76c2e/src/puppeteer/README.md?plain=1#L3",
+        "https://github.com/modelcontextprotocol/servers-archived/blob/9be4674d1ddf8c469e6461a27a337eeb65f76c2e/src/puppeteer/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "partly meets",
+      "finding": "A lockfile (`package-lock.json`) is committed. No Dependabot or Renovate configuration file exists at the paths listed in the methodology.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers-archived/blob/9be4674d1ddf8c469e6461a27a337eeb65f76c2e/package-lock.json",
+        "https://github.com/modelcontextprotocol/servers-archived/tree/9be4674d1ddf8c469e6461a27a337eeb65f76c2e"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "partly meets",
+      "finding": "The README carries a caution about what the server can reach; it does not name prompt injection or untrusted content. Quoted: “This server can access local files and local/internal IP addresses since it runs a browser on your machine.”.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers-archived/blob/9be4674d1ddf8c469e6461a27a337eeb65f76c2e/src/puppeteer/README.md?plain=1#L6"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "partly meets",
+      "finding": "Declared MCP library: @modelcontextprotocol/sdk 1.0.1. Lower-bound version 1.0.1 of @modelcontextprotocol/sdk (npm) was published on 2024-11-26, between 12 and 24 months before 2026-11-14.",
+      "sources": [
+        "https://registry.npmjs.org/@modelcontextprotocol/server-puppeteer/latest",
+        "https://registry.npmjs.org/@modelcontextprotocol/sdk"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [],
+  "third_party_reports": [],
+  "not_reverified": []
+}

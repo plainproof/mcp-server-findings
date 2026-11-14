@@ -1,0 +1,173 @@
+{
+  "slug": "mcp-neo4j",
+  "name": "Neo4j Cypher MCP server",
+  "repository": "https://github.com/neo4j-contrib/mcp-neo4j",
+  "repository_at_selection": null,
+  "path_in_repository": "servers/mcp-neo4j-cypher",
+  "publisher": "neo4j-contrib",
+  "publisher_account_type": "Organization",
+  "package": "pypi:mcp-neo4j-cypher",
+  "license_spdx": "MIT",
+  "upstream_status": "active",
+  "upstream_status_note": null,
+  "upstream_status_source": [
+    "https://api.github.com/repos/neo4j-contrib/mcp-neo4j"
+  ],
+  "latest_release": {
+    "version": "0.6.0",
+    "date": "2026-04-10",
+    "source": "https://pypi.org/pypi/mcp-neo4j-cypher/json"
+  },
+  "default_branch": "main",
+  "commit": "1c7ad0793b5f06b42b9c44f855c23eb2064c3bb7",
+  "commit_date": "2026-09-09",
+  "stars": 989,
+  "verified": "2026-11-14",
+  "outcome": "criteria-partly-met",
+  "outcome_statement": "As of 2026-11-14: meets C2, C4, C7; partly meets C1, C3, C5, C6, C8, C9, C10.",
+  "results": {
+    "C1": "partly meets",
+    "C2": "meets",
+    "C3": "partly meets",
+    "C4": "meets",
+    "C5": "partly meets",
+    "C6": "partly meets",
+    "C7": "meets",
+    "C8": "partly meets",
+    "C9": "partly meets",
+    "C10": "partly meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "partly meets",
+      "finding": "The PyPI record for mcp-neo4j-cypher 0.6.0 lists no project or repository URL; the repository's `servers/mcp-neo4j-cypher/pyproject.toml` declares the package name `mcp-neo4j-cypher`. PyPI holds no provenance attestation for the release (the integrity record returned HTTP 404).",
+      "sources": [
+        "https://pypi.org/pypi/mcp-neo4j-cypher/json",
+        "https://github.com/neo4j-contrib/mcp-neo4j/blob/1c7ad0793b5f06b42b9c44f855c23eb2064c3bb7/servers/mcp-neo4j-cypher/pyproject.toml",
+        "https://pypi.org/integrity/mcp-neo4j-cypher/0.6.0/mcp_neo4j_cypher-0.6.0-py3-none-any.whl/provenance"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "meets",
+      "finding": "GitHub shows a security policy for the repository (`SECURITY.md` in the repository), and it describes how to report a vulnerability.",
+      "sources": [
+        "https://github.com/neo4j-contrib/mcp-neo4j/security/policy"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "partly meets",
+      "finding": "The repository is not archived. The latest release is 218 days old (more than 180); repository activity falls within the last 180 days. Latest release 0.6.0 is dated 2026-04-10; the newest commit on `main` is dated 2026-09-09; GitHub reports the last push on 2026-09-09.",
+      "sources": [
+        "https://api.github.com/repos/neo4j-contrib/mcp-neo4j",
+        "https://pypi.org/pypi/mcp-neo4j-cypher/json",
+        "https://github.com/neo4j-contrib/mcp-neo4j/commits/main"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "2 advisories are published in the repository's advisory list for mcp-neo4j-cypher; each names a patched version at or below the latest release (0.6.0). Most recent: GHSA-x3cv-r3g3-fpg9 (low, published 2026-04-17, patched in 0.6.0).",
+      "sources": [
+        "https://github.com/neo4j-contrib/mcp-neo4j/security/advisories",
+        "https://github.com/neo4j-contrib/mcp-neo4j/security/advisories/GHSA-x3cv-r3g3-fpg9"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "partly meets",
+      "finding": "The write tool is available unless read-only mode is set. Quoted: “**Availability**: May be disabled by supplying --read-only as cli flag or `NEO4J_READ_ONLY=true` environment variable”.",
+      "sources": [
+        "https://github.com/neo4j-contrib/mcp-neo4j/blob/1c7ad0793b5f06b42b9c44f855c23eb2064c3bb7/servers/mcp-neo4j-cypher/README.md?plain=1#L48"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "partly meets",
+      "finding": "Environment variables are the preferred route; passing the password as a command-line argument is also documented. Quoted: “Syntax with `--db-url`, `--username`, `--password`, `--read-timeout` and other command line arguments is still supported but environment variables are preferred:”.",
+      "sources": [
+        "https://github.com/neo4j-contrib/mcp-neo4j/blob/1c7ad0793b5f06b42b9c44f855c23eb2064c3bb7/servers/mcp-neo4j-cypher/README.md?plain=1#L352"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "meets",
+      "finding": "The README contains no reference to telemetry or usage collection, and the documented function contacts only the service the user configures. Searched `servers/mcp-neo4j-cypher/README.md` for: telemetry, usage statistics, usage stats, we collect, data collection, opt-out, posthog.",
+      "sources": [
+        "https://github.com/neo4j-contrib/mcp-neo4j/blob/1c7ad0793b5f06b42b9c44f855c23eb2064c3bb7/servers/mcp-neo4j-cypher/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "partly meets",
+      "finding": "A lockfile (`servers/mcp-neo4j-cypher/uv.lock`) is committed. No Dependabot or Renovate configuration file exists at the paths listed in the methodology.",
+      "sources": [
+        "https://github.com/neo4j-contrib/mcp-neo4j/blob/1c7ad0793b5f06b42b9c44f855c23eb2064c3bb7/servers/mcp-neo4j-cypher/uv.lock",
+        "https://github.com/neo4j-contrib/mcp-neo4j/tree/1c7ad0793b5f06b42b9c44f855c23eb2064c3bb7"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "partly meets",
+      "finding": "The README has security guidance for the HTTP transport; it does not name prompt injection or untrusted content returned by tools. Quoted: “Malicious websites cannot trick browsers into accessing your local server”.",
+      "sources": [
+        "https://github.com/neo4j-contrib/mcp-neo4j/blob/1c7ad0793b5f06b42b9c44f855c23eb2064c3bb7/servers/mcp-neo4j-cypher/README.md?plain=1#L218"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "partly meets",
+      "finding": "Declared MCP library: fastmcp<2.14,>=2.10.5. Lower-bound version 2.10.5 of fastmcp (PyPI) was published on 2025-07-11, between 12 and 24 months before 2026-11-14.",
+      "sources": [
+        "https://pypi.org/pypi/mcp-neo4j-cypher/json",
+        "https://pypi.org/pypi/fastmcp/json"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [
+    {
+      "id": "GHSA-x3cv-r3g3-fpg9",
+      "cve": "CVE-2026-35402",
+      "severity": "low",
+      "published": "2026-04-17",
+      "summary": "SSRF and Data Modification via read_only Mode Bypass through CALL Procedures",
+      "affected": "<0.6.0",
+      "patched": "0.6.0",
+      "url": "https://github.com/neo4j-contrib/mcp-neo4j/security/advisories/GHSA-x3cv-r3g3-fpg9"
+    },
+    {
+      "id": "GHSA-vcqx-v2mg-7chx",
+      "cve": "CVE-2025-10193",
+      "severity": "high",
+      "published": "2025-09-11",
+      "summary": "DNS rebinding vulnerability in Neo4j Cypher MCP server",
+      "affected": ">= 0.2.2, <= 0.3.1",
+      "patched": "v0.4.0",
+      "url": "https://github.com/neo4j-contrib/mcp-neo4j/security/advisories/GHSA-vcqx-v2mg-7chx"
+    }
+  ],
+  "third_party_reports": [],
+  "not_reverified": []
+}

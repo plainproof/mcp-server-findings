@@ -1,0 +1,150 @@
+{
+  "slug": "mcp-server-time",
+  "name": "Time (reference server)",
+  "repository": "https://github.com/modelcontextprotocol/servers",
+  "repository_at_selection": null,
+  "path_in_repository": "src/time",
+  "publisher": "modelcontextprotocol",
+  "publisher_account_type": "Organization",
+  "package": "pypi:mcp-server-time",
+  "license_spdx": "NOASSERTION",
+  "upstream_status": "active",
+  "upstream_status_note": null,
+  "upstream_status_source": [
+    "https://api.github.com/repos/modelcontextprotocol/servers"
+  ],
+  "latest_release": {
+    "version": "2026.11.11",
+    "date": "2026-11-11",
+    "source": "https://pypi.org/pypi/mcp-server-time/json"
+  },
+  "default_branch": "main",
+  "commit": "e1dc4b18dbb948921da37f3d4224a628730b43b0",
+  "commit_date": "2026-11-11",
+  "stars": 91986,
+  "verified": "2026-11-14",
+  "outcome": "criteria-met",
+  "outcome_statement": "As of 2026-11-14: meets C1, C2, C3, C4, C5, C6, C7, C9, C10; partly meets C8.",
+  "results": {
+    "C1": "meets",
+    "C2": "meets",
+    "C3": "meets",
+    "C4": "meets",
+    "C5": "meets",
+    "C6": "meets",
+    "C7": "meets",
+    "C8": "partly meets",
+    "C9": "meets",
+    "C10": "meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "meets",
+      "finding": "The PyPI record for mcp-server-time 2026.11.11 links the repository, and PyPI holds a provenance attestation for the release naming `modelcontextprotocol/servers` (workflow `release.yml`) as publisher.",
+      "sources": [
+        "https://pypi.org/pypi/mcp-server-time/json",
+        "https://pypi.org/integrity/mcp-server-time/2026.11.11/mcp_server_time-2026.11.11-py3-none-any.whl/provenance"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "meets",
+      "finding": "GitHub shows a security policy for the repository (`SECURITY.md` in the repository), and it describes how to report a vulnerability.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers/security/policy"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "meets",
+      "finding": "The repository is not archived and the package is not marked deprecated. Latest release 2026.11.11 is dated 2026-11-11; the newest commit on `main` is dated 2026-11-11; GitHub reports the last push on 2026-11-12.",
+      "sources": [
+        "https://api.github.com/repos/modelcontextprotocol/servers",
+        "https://pypi.org/pypi/mcp-server-time/json",
+        "https://github.com/modelcontextprotocol/servers/commits/main"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "No advisory is published in the repository's advisory list for mcp-server-time.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers/security/advisories"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "meets",
+      "finding": "The documented tools compute times and time-zone conversions; no write, delete or execute capability is documented. Quoted: “`get_current_time` - Get current time in a specific timezone or system timezone.”.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers/blob/e1dc4b18dbb948921da37f3d4224a628730b43b0/src/time/README.md?plain=1#L13"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "meets",
+      "finding": "The documented setup takes no credential. Searched `src/time/README.md` for: API_KEY, _TOKEN\\b, password.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers/blob/e1dc4b18dbb948921da37f3d4224a628730b43b0/src/time/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "meets",
+      "finding": "The README contains no reference to telemetry or usage collection, and the documented function contacts only the service the user configures. Searched `src/time/README.md` for: telemetry, usage statistics, usage stats, we collect, data collection, opt-out, posthog.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers/blob/e1dc4b18dbb948921da37f3d4224a628730b43b0/src/time/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "partly meets",
+      "finding": "A lockfile (`package-lock.json`) is committed. No Dependabot or Renovate configuration file exists at the paths listed in the methodology.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers/blob/e1dc4b18dbb948921da37f3d4224a628730b43b0/package-lock.json",
+        "https://github.com/modelcontextprotocol/servers/tree/e1dc4b18dbb948921da37f3d4224a628730b43b0"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "meets",
+      "finding": "The documented tools return only values the server computes. Quoted: “`convert_time` - Convert time between timezones.”.",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers/blob/e1dc4b18dbb948921da37f3d4224a628730b43b0/src/time/README.md?plain=1#L17"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "meets",
+      "finding": "Declared MCP library: mcp<3,>=2.3. Lower-bound version 2.3.0 of mcp (PyPI) was published on 2026-10-02, within the 12 months before 2026-11-14.",
+      "sources": [
+        "https://pypi.org/pypi/mcp-server-time/json",
+        "https://pypi.org/pypi/mcp/json"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [],
+  "third_party_reports": [],
+  "not_reverified": []
+}

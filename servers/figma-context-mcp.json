@@ -1,0 +1,161 @@
+{
+  "slug": "figma-context-mcp",
+  "name": "Framelink MCP for Figma",
+  "repository": "https://github.com/GLips/Figma-Context-MCP",
+  "repository_at_selection": null,
+  "path_in_repository": null,
+  "publisher": "GLips",
+  "publisher_account_type": "User",
+  "package": "npm:figma-developer-mcp",
+  "license_spdx": "MIT",
+  "upstream_status": "active",
+  "upstream_status_note": null,
+  "upstream_status_source": [
+    "https://api.github.com/repos/GLips/Figma-Context-MCP"
+  ],
+  "latest_release": {
+    "version": "0.13.2",
+    "date": "2026-06-18",
+    "source": "https://registry.npmjs.org/figma-developer-mcp/latest"
+  },
+  "default_branch": "main",
+  "commit": "c083d65c7e002923e7cb98f4e3bdafb105e90f6d",
+  "commit_date": "2026-06-24",
+  "stars": 16206,
+  "verified": "2026-11-14",
+  "outcome": "criteria-partly-met",
+  "outcome_statement": "As of 2026-11-14: meets C1, C2, C3, C4, C5, C7, C10; partly meets C6, C8; does not meet C9.",
+  "results": {
+    "C1": "meets",
+    "C2": "meets",
+    "C3": "meets",
+    "C4": "meets",
+    "C5": "meets",
+    "C6": "partly meets",
+    "C7": "meets",
+    "C8": "partly meets",
+    "C9": "does not meet",
+    "C10": "meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "meets",
+      "finding": "The npm record for figma-developer-mcp@0.13.2 names the repository `git+https://github.com/GLips/Figma-Context-MCP.git` and carries a provenance attestation (`dist.attestations`).",
+      "sources": [
+        "https://registry.npmjs.org/figma-developer-mcp/latest"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "meets",
+      "finding": "GitHub shows a security policy for the repository (`SECURITY.md` in the repository), and it describes how to report a vulnerability.",
+      "sources": [
+        "https://github.com/GLips/Figma-Context-MCP/security/policy"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "meets",
+      "finding": "The repository is not archived and the package is not marked deprecated. Latest release 0.13.2 is dated 2026-06-18; the newest commit on `main` is dated 2026-06-24; GitHub reports the last push on 2026-10-27.",
+      "sources": [
+        "https://api.github.com/repos/GLips/Figma-Context-MCP",
+        "https://registry.npmjs.org/figma-developer-mcp/latest",
+        "https://github.com/GLips/Figma-Context-MCP/commits/main"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "1 advisory is published in the repository's advisory list; it names a patched version at or below the latest release (0.13.2). Most recent: GHSA-gxw4-4fc5-9gr5 (high, published 2025-09-29, patched in 0.6.3).",
+      "sources": [
+        "https://github.com/GLips/Figma-Context-MCP/security/advisories",
+        "https://github.com/GLips/Figma-Context-MCP/security/advisories/GHSA-gxw4-4fc5-9gr5"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "meets",
+      "finding": "The README describes the server as fetching Figma design data for the model; no write or execute tool is documented in the README. Quoted: “it simplifies and translates the response so only the most relevant layout and styling information is provided to the model.”.",
+      "sources": [
+        "https://github.com/GLips/Figma-Context-MCP/blob/c083d65c7e002923e7cb98f4e3bdafb105e90f6d/README.md?plain=1#L47"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "partly meets",
+      "finding": "The README's configuration examples pass the Figma key as a command-line argument; an environment-variable alternative is mentioned. Quoted: “\"args\": [\"-y\", \"figma-developer-mcp\", \"--figma-api-key=YOUR-KEY\", \"--stdio\"]”; “Or you can set `FIGMA_API_KEY` and `PORT` in the `env` field.”.",
+      "sources": [
+        "https://github.com/GLips/Figma-Context-MCP/blob/c083d65c7e002923e7cb98f4e3bdafb105e90f6d/README.md?plain=1#L66"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "meets",
+      "finding": "The README contains no reference to telemetry or usage collection, and the documented function contacts only the service the user configures. Searched `README.md` for: telemetry, usage statistics, usage stats, we collect, data collection, opt-out, posthog.",
+      "sources": [
+        "https://github.com/GLips/Figma-Context-MCP/blob/c083d65c7e002923e7cb98f4e3bdafb105e90f6d/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "partly meets",
+      "finding": "A lockfile (`pnpm-lock.yaml`) is committed. No Dependabot or Renovate configuration file exists at the paths listed in the methodology.",
+      "sources": [
+        "https://github.com/GLips/Figma-Context-MCP/blob/c083d65c7e002923e7cb98f4e3bdafb105e90f6d/pnpm-lock.yaml",
+        "https://github.com/GLips/Figma-Context-MCP/tree/c083d65c7e002923e7cb98f4e3bdafb105e90f6d"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "does not meet",
+      "finding": "No statement about prompt injection or untrusted content was found in the files searched. Searched `README.md` for: prompt-injection, untrusted, malicious, attacker, adversarial; `SECURITY.md` for: prompt-injection, untrusted.",
+      "sources": [
+        "https://github.com/GLips/Figma-Context-MCP/blob/c083d65c7e002923e7cb98f4e3bdafb105e90f6d/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "meets",
+      "finding": "Declared MCP library: @modelcontextprotocol/sdk 1.29.0. Lower-bound version 1.29.0 of @modelcontextprotocol/sdk (npm) was published on 2026-03-30, within the 12 months before 2026-11-14.",
+      "sources": [
+        "https://registry.npmjs.org/figma-developer-mcp/latest",
+        "https://registry.npmjs.org/@modelcontextprotocol/sdk"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [
+    {
+      "id": "GHSA-gxw4-4fc5-9gr5",
+      "cve": "CVE-2025-53967",
+      "severity": "high",
+      "published": "2025-09-29",
+      "summary": "figma-developer-mcp vulnerable to command injection in get_figma_data tool",
+      "affected": "<=0.6.2",
+      "patched": "0.6.3",
+      "url": "https://github.com/GLips/Figma-Context-MCP/security/advisories/GHSA-gxw4-4fc5-9gr5"
+    }
+  ],
+  "third_party_reports": [],
+  "not_reverified": []
+}

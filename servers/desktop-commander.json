@@ -1,0 +1,150 @@
+{
+  "slug": "desktop-commander",
+  "name": "Desktop Commander MCP",
+  "repository": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+  "repository_at_selection": null,
+  "path_in_repository": null,
+  "publisher": "wonderwhy-er",
+  "publisher_account_type": "User",
+  "package": "npm:@wonderwhy-er/desktop-commander",
+  "license_spdx": "MIT",
+  "upstream_status": "active",
+  "upstream_status_note": null,
+  "upstream_status_source": [
+    "https://api.github.com/repos/wonderwhy-er/DesktopCommanderMCP"
+  ],
+  "latest_release": {
+    "version": "0.3.3",
+    "date": "2026-11-12",
+    "source": "https://registry.npmjs.org/@wonderwhy-er/desktop-commander/latest"
+  },
+  "default_branch": "main",
+  "commit": "bce370e9395f5bc74eda34913e5ae1dee48df8f8",
+  "commit_date": "2026-11-12",
+  "stars": 10307,
+  "verified": "2026-11-14",
+  "outcome": "criteria-met",
+  "outcome_statement": "As of 2026-11-14: meets C1, C2, C3, C4, C6, C9, C10; partly meets C5, C7, C8.",
+  "results": {
+    "C1": "meets",
+    "C2": "meets",
+    "C3": "meets",
+    "C4": "meets",
+    "C5": "partly meets",
+    "C6": "meets",
+    "C7": "partly meets",
+    "C8": "partly meets",
+    "C9": "meets",
+    "C10": "meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "meets",
+      "finding": "The npm record for @wonderwhy-er/desktop-commander@0.3.3 names the repository `git+https://github.com/wonderwhy-er/DesktopCommanderMCP.git` and carries a provenance attestation (`dist.attestations`).",
+      "sources": [
+        "https://registry.npmjs.org/@wonderwhy-er/desktop-commander/latest"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "meets",
+      "finding": "GitHub shows a security policy for the repository (`SECURITY.md` in the repository), and it describes how to report a vulnerability.",
+      "sources": [
+        "https://github.com/wonderwhy-er/DesktopCommanderMCP/security/policy"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "meets",
+      "finding": "The repository is not archived and the package is not marked deprecated. Latest release 0.3.3 is dated 2026-11-12; the newest commit on `main` is dated 2026-11-12; GitHub reports the last push on 2026-11-12.",
+      "sources": [
+        "https://api.github.com/repos/wonderwhy-er/DesktopCommanderMCP",
+        "https://registry.npmjs.org/@wonderwhy-er/desktop-commander/latest",
+        "https://github.com/wonderwhy-er/DesktopCommanderMCP/commits/main"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "No advisory is published in the repository's advisory list.",
+      "sources": [
+        "https://github.com/wonderwhy-er/DesktopCommanderMCP/security/advisories"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "partly meets",
+      "finding": "Terminal commands and file edits are core functions; the README documents directory and command restrictions and states their limits. Quoted: “Directory restrictions and command blocking can be bypassed through various methods including symlinks, command substitution, and absolute paths or code execution”.",
+      "sources": [
+        "https://github.com/wonderwhy-er/DesktopCommanderMCP/blob/bce370e9395f5bc74eda34913e5ae1dee48df8f8/README.md?plain=1#L832"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "meets",
+      "finding": "The documented local setup takes no API key or token. Searched `README.md` for: API_KEY, _TOKEN\\b.",
+      "sources": [
+        "https://github.com/wonderwhy-er/DesktopCommanderMCP/blob/bce370e9395f5bc74eda34913e5ae1dee48df8f8/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "partly meets",
+      "finding": "Telemetry is documented as collected by default, with a documented opt-out. The npm record declares a `postinstall` script that runs `dist/track-installation.js`. Quoted: “Desktop Commander collects limited, pseudonymous telemetry to improve the tool.”; “**Opt-out:** Ask Claude to \"disable Desktop Commander telemetry\" or set `\"telemetryEnabled\": false` in your config.”; “node dist/track-installation.js”.",
+      "sources": [
+        "https://github.com/wonderwhy-er/DesktopCommanderMCP/blob/bce370e9395f5bc74eda34913e5ae1dee48df8f8/README.md?plain=1#L1141",
+        "https://registry.npmjs.org/@wonderwhy-er/desktop-commander/latest"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "partly meets",
+      "finding": "A lockfile (`package-lock.json`) is committed. No Dependabot or Renovate configuration file exists at the paths listed in the methodology.",
+      "sources": [
+        "https://github.com/wonderwhy-er/DesktopCommanderMCP/blob/bce370e9395f5bc74eda34913e5ae1dee48df8f8/package-lock.json",
+        "https://github.com/wonderwhy-er/DesktopCommanderMCP/tree/bce370e9395f5bc74eda34913e5ae1dee48df8f8"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "meets",
+      "finding": "The security policy names prompt injection and recommends OS-level isolation for that case. Quoted: “Desktop Commander does not protect against a compromised AI account or prompt injection reaching a trusted client. For that threat model, use OS-level isolation.”.",
+      "sources": [
+        "https://github.com/wonderwhy-er/DesktopCommanderMCP/blob/bce370e9395f5bc74eda34913e5ae1dee48df8f8/SECURITY.md?plain=1#L44"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "meets",
+      "finding": "Declared MCP library: @modelcontextprotocol/sdk ^1.32.1. Lower-bound version 1.32.1 of @modelcontextprotocol/sdk (npm) was published on 2026-10-05, within the 12 months before 2026-11-14.",
+      "sources": [
+        "https://registry.npmjs.org/@wonderwhy-er/desktop-commander/latest",
+        "https://registry.npmjs.org/@modelcontextprotocol/sdk"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [],
+  "third_party_reports": [],
+  "not_reverified": []
+}

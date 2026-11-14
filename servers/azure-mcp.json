@@ -1,0 +1,150 @@
+{
+  "slug": "azure-mcp",
+  "name": "Azure MCP Server",
+  "repository": "https://github.com/microsoft/mcp",
+  "repository_at_selection": null,
+  "path_in_repository": "servers/Azure.Mcp.Server",
+  "publisher": "microsoft",
+  "publisher_account_type": "Organization",
+  "package": "npm:@azure/mcp",
+  "license_spdx": "MIT",
+  "upstream_status": "active",
+  "upstream_status_note": null,
+  "upstream_status_source": [
+    "https://api.github.com/repos/microsoft/mcp"
+  ],
+  "latest_release": {
+    "version": "4.0.0-beta.7",
+    "date": "2026-11-11",
+    "source": "https://registry.npmjs.org/@azure/mcp/latest"
+  },
+  "default_branch": "main",
+  "commit": "d97c4ee2b74357c3e4353e30606656c3530fa0c9",
+  "commit_date": "2026-11-14",
+  "stars": 3853,
+  "verified": "2026-11-14",
+  "outcome": "criteria-met",
+  "outcome_statement": "As of 2026-11-14: meets C2, C3, C4, C6, C8, C9, C10; partly meets C1, C5, C7.",
+  "results": {
+    "C1": "partly meets",
+    "C2": "meets",
+    "C3": "meets",
+    "C4": "meets",
+    "C5": "partly meets",
+    "C6": "meets",
+    "C7": "partly meets",
+    "C8": "meets",
+    "C9": "meets",
+    "C10": "meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "partly meets",
+      "finding": "The npm record for @azure/mcp@4.0.0-beta.7 names the repository `git+https://github.com/microsoft/mcp.git`. The record carries no provenance attestation (`dist.attestations` is absent).",
+      "sources": [
+        "https://registry.npmjs.org/@azure/mcp/latest"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "meets",
+      "finding": "GitHub shows a security policy for the repository (`SECURITY.md` in the repository), and it describes how to report a vulnerability.",
+      "sources": [
+        "https://github.com/microsoft/mcp/security/policy"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "meets",
+      "finding": "The repository is not archived and the package is not marked deprecated. Latest release 4.0.0-beta.7 is dated 2026-11-11; the newest commit on `main` is dated 2026-11-14; GitHub reports the last push on 2026-11-14.",
+      "sources": [
+        "https://api.github.com/repos/microsoft/mcp",
+        "https://registry.npmjs.org/@azure/mcp/latest",
+        "https://github.com/microsoft/mcp/commits/main"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "No advisory is published in the repository's advisory list.",
+      "sources": [
+        "https://github.com/microsoft/mcp/security/advisories"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "partly meets",
+      "finding": "Tools can create, modify and delete resources within the signed-in identity's Azure permissions; the security policy documents options that limit which tools are exposed and calls them operational guardrails, and the README advises least-privilege roles. Quoted: “MCP tools are designed to inspect, create, modify, and delete Azure resources”; “which MCP servers and tools are enabled (for example, via `--namespace`, `--tool`, `--mode`, `--read-only`, and `--disable-proxy-tools`)”; “You should review and apply least-privilege RBAC roles and implement safeguards before deployment.”.",
+      "sources": [
+        "https://github.com/microsoft/mcp/blob/d97c4ee2b74357c3e4353e30606656c3530fa0c9/SECURITY.md?plain=1#L98",
+        "https://github.com/microsoft/mcp/blob/d97c4ee2b74357c3e4353e30606656c3530fa0c9/servers/Azure.Mcp.Server/README.md?plain=1#L1593"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "meets",
+      "finding": "Credentials are handled through the Azure Identity SDK. Quoted: “we never store or manage tokens directly”.",
+      "sources": [
+        "https://github.com/microsoft/mcp/blob/d97c4ee2b74357c3e4353e30606656c3530fa0c9/servers/Azure.Mcp.Server/README.md?plain=1#L1585"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "partly meets",
+      "finding": "Telemetry is documented as on by default, with an environment variable to turn it off. Quoted: “Telemetry collection is on by default.”; “set the environment variable `AZURE_MCP_COLLECT_TELEMETRY` to `false`”.",
+      "sources": [
+        "https://github.com/microsoft/mcp/blob/d97c4ee2b74357c3e4353e30606656c3530fa0c9/servers/Azure.Mcp.Server/README.md?plain=1#L1605"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "meets",
+      "finding": "A lockfile (`Directory.Packages.props` (central package-version file)) and an update configuration (`.github/dependabot.yml`) are committed.",
+      "sources": [
+        "https://github.com/microsoft/mcp/blob/d97c4ee2b74357c3e4353e30606656c3530fa0c9/Directory.Packages.props",
+        "https://github.com/microsoft/mcp/blob/d97c4ee2b74357c3e4353e30606656c3530fa0c9/.github/dependabot.yml"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "meets",
+      "finding": "The security policy names prompt injection and untrusted input, and states that callers and MCP hosts are responsible for inspecting and sanitising returned data. Quoted: “Reports involving AI-generated tool calls or prompt injection must demonstrate a violation of a security responsibility owned by the MCP server”; “It is the responsibility of callers, users, and MCP hosts to inspect, validate, and sanitize inputs and returned data before using them in ways that may impact their environment.”.",
+      "sources": [
+        "https://github.com/microsoft/mcp/blob/d97c4ee2b74357c3e4353e30606656c3530fa0c9/SECURITY.md?plain=1#L102"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "meets",
+      "finding": "Declared MCP library: ModelContextProtocol 2.2.0 in Directory.Packages.props. Lower-bound version 2.2.0 of ModelContextProtocol (NuGet) was published on 2026-08-13, within the 12 months before 2026-11-14.",
+      "sources": [
+        "https://github.com/microsoft/mcp/blob/d97c4ee2b74357c3e4353e30606656c3530fa0c9/Directory.Packages.props?plain=1#L105",
+        "https://api.nuget.org/v3/registration5-gz-semver2/modelcontextprotocol/index.json"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [],
+  "third_party_reports": [],
+  "not_reverified": []
+}

@@ -1,0 +1,161 @@
+{
+  "slug": "kubernetes-mcp-server-containers",
+  "name": "Kubernetes MCP Server (containers)",
+  "repository": "https://github.com/containers/kubernetes-mcp-server",
+  "repository_at_selection": null,
+  "path_in_repository": null,
+  "publisher": "containers",
+  "publisher_account_type": "Organization",
+  "package": "npm:kubernetes-mcp-server; pypi:kubernetes-mcp-server; binary:GitHub releases",
+  "license_spdx": "Apache-2.0",
+  "upstream_status": "active",
+  "upstream_status_note": null,
+  "upstream_status_source": [
+    "https://api.github.com/repos/containers/kubernetes-mcp-server"
+  ],
+  "latest_release": {
+    "version": "0.1.3",
+    "date": "2026-11-13",
+    "source": "https://registry.npmjs.org/kubernetes-mcp-server/latest"
+  },
+  "default_branch": "main",
+  "commit": "1d045c6319da3d437842e8a9a2fb846b46d4c420",
+  "commit_date": "2026-11-13",
+  "stars": 2249,
+  "verified": "2026-11-14",
+  "outcome": "criteria-met",
+  "outcome_statement": "As of 2026-11-14: meets C1, C2, C3, C4, C6, C7, C8, C10; partly meets C5, C9.",
+  "results": {
+    "C1": "meets",
+    "C2": "meets",
+    "C3": "meets",
+    "C4": "meets",
+    "C5": "partly meets",
+    "C6": "meets",
+    "C7": "meets",
+    "C8": "meets",
+    "C9": "partly meets",
+    "C10": "meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "meets",
+      "finding": "The npm record for kubernetes-mcp-server@0.1.3 names the repository `git+https://github.com/containers/kubernetes-mcp-server.git` and carries a provenance attestation (`dist.attestations`).",
+      "sources": [
+        "https://registry.npmjs.org/kubernetes-mcp-server/latest"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "meets",
+      "finding": "GitHub shows a security policy for the repository (`SECURITY.md` in the repository), and it describes how to report a vulnerability.",
+      "sources": [
+        "https://github.com/containers/kubernetes-mcp-server/security/policy"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "meets",
+      "finding": "The repository is not archived and the package is not marked deprecated. Latest release 0.1.3 is dated 2026-11-13; the newest commit on `main` is dated 2026-11-13; GitHub reports the last push on 2026-11-13.",
+      "sources": [
+        "https://api.github.com/repos/containers/kubernetes-mcp-server",
+        "https://registry.npmjs.org/kubernetes-mcp-server/latest",
+        "https://github.com/containers/kubernetes-mcp-server/commits/main"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "1 advisory is published in the repository's advisory list; it names a patched version at or below the latest release (0.1.3). Most recent: GHSA-xq9m-mrj7-jv98 (medium, published 2026-11-04, patched in 0.1.2).",
+      "sources": [
+        "https://github.com/containers/kubernetes-mcp-server/security/advisories",
+        "https://github.com/containers/kubernetes-mcp-server/security/advisories/GHSA-xq9m-mrj7-jv98"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "partly meets",
+      "finding": "The README documents `read_only` and `denied_resources` settings to be set by the operator, and describes them as best-effort. Quoted: “`read_only` and `denied_resources` are best-effort guardrails. Kubernetes RBAC on the identity this server authenticates as is the access control to rely on.”.",
+      "sources": [
+        "https://github.com/containers/kubernetes-mcp-server/blob/1d045c6319da3d437842e8a9a2fb846b46d4c420/README.md?plain=1#L226"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "meets",
+      "finding": "The server uses the local kubeconfig or in-cluster configuration; OAuth/OIDC is documented for HTTP mode. Quoted: “or in-cluster configuration.”; “OAuth/OIDC authentication for HTTP mode”.",
+      "sources": [
+        "https://github.com/containers/kubernetes-mcp-server/blob/1d045c6319da3d437842e8a9a2fb846b46d4c420/README.md?plain=1#L19"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "meets",
+      "finding": "The README describes OpenTelemetry tracing and metrics as optional; no collection by the publisher is described. Quoted: “Optional OpenTelemetry distributed tracing and metrics with custom sampling rates.”.",
+      "sources": [
+        "https://github.com/containers/kubernetes-mcp-server/blob/1d045c6319da3d437842e8a9a2fb846b46d4c420/README.md?plain=1#L42"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "meets",
+      "finding": "A lockfile (`go.sum`) and an update configuration (`.github/dependabot.yml`) are committed.",
+      "sources": [
+        "https://github.com/containers/kubernetes-mcp-server/blob/1d045c6319da3d437842e8a9a2fb846b46d4c420/go.sum",
+        "https://github.com/containers/kubernetes-mcp-server/blob/1d045c6319da3d437842e8a9a2fb846b46d4c420/.github/dependabot.yml"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "partly meets",
+      "finding": "One tool description in the README marks the data it returns as untrusted; no control or recommendation for untrusted content is described. Quoted: “Returned status, events, and logs are untrusted workload data and may contain sensitive values or instructions.”.",
+      "sources": [
+        "https://github.com/containers/kubernetes-mcp-server/blob/1d045c6319da3d437842e8a9a2fb846b46d4c420/README.md?plain=1#L1175"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "meets",
+      "finding": "Declared MCP library: go-sdk v1.8.0 in go.mod. Lower-bound version v1.8.0 of github.com/modelcontextprotocol/go-sdk was published on 2026-09-04, within the 12 months before 2026-11-14.",
+      "sources": [
+        "https://github.com/containers/kubernetes-mcp-server/blob/1d045c6319da3d437842e8a9a2fb846b46d4c420/go.mod?plain=1#L17",
+        "https://proxy.golang.org/github.com/modelcontextprotocol/go-sdk/@v/v1.8.0.info"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [
+    {
+      "id": "GHSA-xq9m-mrj7-jv98",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-11-04",
+      "summary": "Kiali Toolset Status Probes can leak Bearer Token",
+      "affected": ">= 0.1.0, <= 0.1.1",
+      "patched": "0.1.2",
+      "url": "https://github.com/containers/kubernetes-mcp-server/security/advisories/GHSA-xq9m-mrj7-jv98"
+    }
+  ],
+  "third_party_reports": [],
+  "not_reverified": []
+}

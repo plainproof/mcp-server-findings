@@ -1,0 +1,149 @@
+{
+  "slug": "mcp-grafana",
+  "name": "Grafana MCP server",
+  "repository": "https://github.com/grafana/mcp-grafana",
+  "repository_at_selection": null,
+  "path_in_repository": null,
+  "publisher": "grafana",
+  "publisher_account_type": "Organization",
+  "package": "binary:GitHub releases; oci:grafana/mcp-grafana",
+  "license_spdx": "Apache-2.0",
+  "upstream_status": "active",
+  "upstream_status_note": null,
+  "upstream_status_source": [
+    "https://api.github.com/repos/grafana/mcp-grafana"
+  ],
+  "latest_release": {
+    "version": "v2.3.0",
+    "date": "2026-11-10",
+    "source": "https://github.com/grafana/mcp-grafana/releases/tag/v2.3.0"
+  },
+  "default_branch": "main",
+  "commit": "4f09d9f45d352c8e92870bdfe75bf76af416e35f",
+  "commit_date": "2026-11-13",
+  "stars": 3668,
+  "verified": "2026-11-14",
+  "outcome": "criteria-partly-met",
+  "outcome_statement": "As of 2026-11-14: meets C1, C2, C3, C4, C6, C8, C10; partly meets C5, C7; does not meet C9.",
+  "results": {
+    "C1": "meets",
+    "C2": "meets",
+    "C3": "meets",
+    "C4": "meets",
+    "C5": "partly meets",
+    "C6": "meets",
+    "C7": "partly meets",
+    "C8": "meets",
+    "C9": "does not meet",
+    "C10": "meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "meets",
+      "finding": "The source repository is public and release v2.3.0 is published from it. The release assets include a Sigstore bundle for the checksums file (`mcp-grafana_2.3.0_checksums.txt.sigstore.json`) and SBOM files.",
+      "sources": [
+        "https://github.com/grafana/mcp-grafana/releases/tag/v2.3.0"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "meets",
+      "finding": "GitHub shows a security policy for the repository, and it describes how to report a vulnerability.",
+      "sources": [
+        "https://github.com/grafana/mcp-grafana/security/policy"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "meets",
+      "finding": "The repository is not archived and the package is not marked deprecated. Latest release v2.3.0 is dated 2026-11-10; the newest commit on `main` is dated 2026-11-13; GitHub reports the last push on 2026-11-13.",
+      "sources": [
+        "https://api.github.com/repos/grafana/mcp-grafana",
+        "https://github.com/grafana/mcp-grafana/releases/tag/v2.3.0",
+        "https://github.com/grafana/mcp-grafana/commits/main"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "No advisory is published in the repository's advisory list.",
+      "sources": [
+        "https://github.com/grafana/mcp-grafana/security/advisories"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "partly meets",
+      "finding": "Write tools are on unless `--disable-write` is set; several tool categories are off by default. Quoted: “The `--disable-write` flag provides a way to run the MCP server in read-only mode, preventing any write operations to your Grafana instance.”.",
+      "sources": [
+        "https://github.com/grafana/mcp-grafana/blob/4f09d9f45d352c8e92870bdfe75bf76af416e35f/README.md?plain=1#L584"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "meets",
+      "finding": "The service-account token is supplied through an environment variable. Quoted: “\"GRAFANA_SERVICE_ACCOUNT_TOKEN\": \"<your service account token>\"”.",
+      "sources": [
+        "https://github.com/grafana/mcp-grafana/blob/4f09d9f45d352c8e92870bdfe75bf76af416e35f/README.md?plain=1#L25"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "partly meets",
+      "finding": "Anonymous usage statistics are documented as on by default, with documented ways to turn them off. Quoted: “**Reporting is enabled by default**. To opt out, set `--usage-stats=disabled`, `GRAFANA_USAGE_STATS=disabled`, or `DO_NOT_TRACK=1`.”.",
+      "sources": [
+        "https://github.com/grafana/mcp-grafana/blob/4f09d9f45d352c8e92870bdfe75bf76af416e35f/README.md?plain=1#L1302"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "meets",
+      "finding": "A lockfile (`go.sum`) and an update configuration (`renovate.json`) are committed.",
+      "sources": [
+        "https://github.com/grafana/mcp-grafana/blob/4f09d9f45d352c8e92870bdfe75bf76af416e35f/go.sum",
+        "https://github.com/grafana/mcp-grafana/blob/4f09d9f45d352c8e92870bdfe75bf76af416e35f/renovate.json"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "does not meet",
+      "finding": "No statement about prompt injection or untrusted content was found in the files searched. Searched `README.md` for: prompt-injection, untrusted, malicious, attacker, adversarial.",
+      "sources": [
+        "https://github.com/grafana/mcp-grafana/blob/4f09d9f45d352c8e92870bdfe75bf76af416e35f/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "meets",
+      "finding": "Declared MCP library: go-sdk v1.8.0 in go.mod. Lower-bound version v1.8.0 of github.com/modelcontextprotocol/go-sdk was published on 2026-09-04, within the 12 months before 2026-11-14.",
+      "sources": [
+        "https://github.com/grafana/mcp-grafana/blob/4f09d9f45d352c8e92870bdfe75bf76af416e35f/go.mod?plain=1#L24",
+        "https://proxy.golang.org/github.com/modelcontextprotocol/go-sdk/@v/v1.8.0.info"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [],
+  "third_party_reports": [],
+  "not_reverified": []
+}

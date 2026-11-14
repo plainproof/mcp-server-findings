@@ -1,0 +1,153 @@
+{
+  "slug": "gmail-mcp-server-gongrzhe",
+  "name": "Gmail AutoAuth MCP Server",
+  "repository": "https://github.com/GongRzhe/Gmail-MCP-Server",
+  "repository_at_selection": null,
+  "path_in_repository": null,
+  "publisher": "GongRzhe",
+  "publisher_account_type": "User",
+  "package": "npm:@gongrzhe/server-gmail-autoauth-mcp",
+  "license_spdx": "MIT",
+  "upstream_status": "archived-upstream",
+  "upstream_status_note": "The repository is archived (read-only) on GitHub.",
+  "upstream_status_source": [
+    "https://api.github.com/repos/GongRzhe/Gmail-MCP-Server"
+  ],
+  "latest_release": {
+    "version": "1.1.11",
+    "date": "2025-08-06",
+    "source": "https://registry.npmjs.org/@gongrzhe/server-gmail-autoauth-mcp/latest"
+  },
+  "default_branch": "main",
+  "commit": "a890d19189bbc1325b8728fab830fc278cfd8804",
+  "commit_date": "2025-08-06",
+  "stars": 1169,
+  "verified": "2026-11-14",
+  "outcome": "criteria-not-met",
+  "outcome_statement": "As of 2026-11-14: meets C4, C6, C7; partly meets C8; does not meet C1, C2, C3, C5, C9, C10.",
+  "results": {
+    "C1": "does not meet",
+    "C2": "does not meet",
+    "C3": "does not meet",
+    "C4": "meets",
+    "C5": "does not meet",
+    "C6": "meets",
+    "C7": "meets",
+    "C8": "partly meets",
+    "C9": "does not meet",
+    "C10": "does not meet"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "does not meet",
+      "finding": "The npm record for @gongrzhe/server-gmail-autoauth-mcp@1.1.11 names the repository `git+https://github.com/gongrzhe/server-gmail-autoauth-mcp.git`. That address returned HTTP 404 on the verification date. The record carries no provenance attestation. (The repository reviewed here, GongRzhe/Gmail-MCP-Server, declares the same package name in its package.json.)",
+      "sources": [
+        "https://registry.npmjs.org/@gongrzhe/server-gmail-autoauth-mcp/latest",
+        "https://github.com/gongrzhe/server-gmail-autoauth-mcp",
+        "https://github.com/GongRzhe/Gmail-MCP-Server/blob/a890d19189bbc1325b8728fab830fc278cfd8804/package.json"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "does not meet",
+      "finding": "GitHub's security-policy page for the repository says \"No security policy detected\" and offers no private vulnerability reporting; the README names no channel for security reports (searched for: security@, vulnerability, responsible disclosure, report security).",
+      "sources": [
+        "https://github.com/GongRzhe/Gmail-MCP-Server/security/policy",
+        "https://github.com/GongRzhe/Gmail-MCP-Server/blob/a890d19189bbc1325b8728fab830fc278cfd8804/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "does not meet",
+      "finding": "The repository is archived (read-only) on GitHub. Latest release 1.1.11 is dated 2025-08-06; the newest commit on `main` is dated 2025-08-06; GitHub reports the last push on 2025-08-06.",
+      "sources": [
+        "https://api.github.com/repos/GongRzhe/Gmail-MCP-Server",
+        "https://registry.npmjs.org/@gongrzhe/server-gmail-autoauth-mcp/latest",
+        "https://github.com/GongRzhe/Gmail-MCP-Server/commits/main"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "No advisory is published in the repository's advisory list.",
+      "sources": [
+        "https://github.com/GongRzhe/Gmail-MCP-Server/security/advisories"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "does not meet",
+      "finding": "The README documents tools that send, modify and delete email; no read-only mode or tool restriction was found in the README. Searched `README.md` for: read-only, readonly, restrict, disable. Quoted: “Sends a new email immediately.”; “Permanently deletes an email.”.",
+      "sources": [
+        "https://github.com/GongRzhe/Gmail-MCP-Server/blob/a890d19189bbc1325b8728fab830fc278cfd8804/README.md?plain=1#L188",
+        "https://github.com/GongRzhe/Gmail-MCP-Server/blob/a890d19189bbc1325b8728fab830fc278cfd8804/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "meets",
+      "finding": "OAuth client keys and tokens are kept in a key file under the user's home directory. Quoted: “OAuth credentials are stored securely in your local environment (`~/.gmail-mcp/`)”.",
+      "sources": [
+        "https://github.com/GongRzhe/Gmail-MCP-Server/blob/a890d19189bbc1325b8728fab830fc278cfd8804/README.md?plain=1#L694"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "meets",
+      "finding": "The README contains no reference to telemetry or usage collection, and the documented function contacts only the service the user configures. Searched `README.md` for: telemetry, usage statistics, usage stats, we collect, data collection, opt-out, posthog.",
+      "sources": [
+        "https://github.com/GongRzhe/Gmail-MCP-Server/blob/a890d19189bbc1325b8728fab830fc278cfd8804/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "partly meets",
+      "finding": "A lockfile (`package-lock.json`) is committed. No Dependabot or Renovate configuration file exists at the paths listed in the methodology.",
+      "sources": [
+        "https://github.com/GongRzhe/Gmail-MCP-Server/blob/a890d19189bbc1325b8728fab830fc278cfd8804/package-lock.json",
+        "https://github.com/GongRzhe/Gmail-MCP-Server/tree/a890d19189bbc1325b8728fab830fc278cfd8804"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "does not meet",
+      "finding": "No statement about prompt injection or untrusted content was found in the files searched. Searched `README.md` for: prompt-injection, untrusted, malicious, attacker, adversarial.",
+      "sources": [
+        "https://github.com/GongRzhe/Gmail-MCP-Server/blob/a890d19189bbc1325b8728fab830fc278cfd8804/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "does not meet",
+      "finding": "Declared MCP library: @modelcontextprotocol/sdk ^0.4.0. Lower-bound version 0.4.0 of @modelcontextprotocol/sdk (npm) was published on 2024-11-11, more than 24 months before 2026-11-14.",
+      "sources": [
+        "https://registry.npmjs.org/@gongrzhe/server-gmail-autoauth-mcp/latest",
+        "https://registry.npmjs.org/@modelcontextprotocol/sdk"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [],
+  "third_party_reports": [],
+  "not_reverified": []
+}

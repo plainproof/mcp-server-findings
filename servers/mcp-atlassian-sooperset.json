@@ -1,0 +1,703 @@
+{
+  "slug": "mcp-atlassian-sooperset",
+  "name": "MCP Atlassian",
+  "repository": "https://github.com/sooperset/mcp-atlassian",
+  "repository_at_selection": null,
+  "path_in_repository": null,
+  "publisher": "sooperset",
+  "publisher_account_type": "User",
+  "package": "pypi:mcp-atlassian; oci:ghcr.io/sooperset/mcp-atlassian",
+  "license_spdx": "MIT",
+  "upstream_status": "active",
+  "upstream_status_note": null,
+  "upstream_status_source": [
+    "https://api.github.com/repos/sooperset/mcp-atlassian"
+  ],
+  "latest_release": {
+    "version": "0.24.4",
+    "date": "2026-11-13",
+    "source": "https://pypi.org/pypi/mcp-atlassian/json"
+  },
+  "default_branch": "main",
+  "commit": "a633020248d6e559c5719c6bcb8f668f76273fd9",
+  "commit_date": "2026-11-14",
+  "stars": 6119,
+  "verified": "2026-11-14",
+  "outcome": "criteria-partly-met",
+  "outcome_statement": "As of 2026-11-14: meets C2, C3, C4, C6, C7, C10; partly meets C1, C5, C8; does not meet C9.",
+  "results": {
+    "C1": "partly meets",
+    "C2": "meets",
+    "C3": "meets",
+    "C4": "meets",
+    "C5": "partly meets",
+    "C6": "meets",
+    "C7": "meets",
+    "C8": "partly meets",
+    "C9": "does not meet",
+    "C10": "meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "partly meets",
+      "finding": "The PyPI record for mcp-atlassian 0.24.4 lists no project or repository URL; the repository's `pyproject.toml` declares the package name `mcp-atlassian`. PyPI holds no provenance attestation for the release (the integrity record returned HTTP 404).",
+      "sources": [
+        "https://pypi.org/pypi/mcp-atlassian/json",
+        "https://github.com/sooperset/mcp-atlassian/blob/a633020248d6e559c5719c6bcb8f668f76273fd9/pyproject.toml",
+        "https://pypi.org/integrity/mcp-atlassian/0.24.4/mcp_atlassian-0.24.4-py3-none-any.whl/provenance"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "meets",
+      "finding": "GitHub shows a security policy for the repository (`SECURITY.md` in the repository), and it describes how to report a vulnerability.",
+      "sources": [
+        "https://github.com/sooperset/mcp-atlassian/security/policy"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "meets",
+      "finding": "The repository is not archived and the package is not marked deprecated. Latest release 0.24.4 is dated 2026-11-13; the newest commit on `main` is dated 2026-11-14; GitHub reports the last push on 2026-11-14.",
+      "sources": [
+        "https://api.github.com/repos/sooperset/mcp-atlassian",
+        "https://pypi.org/pypi/mcp-atlassian/json",
+        "https://github.com/sooperset/mcp-atlassian/commits/main"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "55 advisories are published in the repository's advisory list; each names a patched version at or below the latest release (0.24.4). Most recent: GHSA-qx5g-fhgg-wm59 (low, published 2026-11-12, patched in 0.24.2).",
+      "sources": [
+        "https://github.com/sooperset/mcp-atlassian/security/advisories",
+        "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-qx5g-fhgg-wm59"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "partly meets",
+      "finding": "The project's configuration documentation describes a read-only mode that the operator can set. Quoted: “Read-only mode (disables all write operations)”.",
+      "sources": [
+        "https://mcp-atlassian.soomiles.com/docs/configuration"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "meets",
+      "finding": "API tokens are supplied through environment variables. Quoted: “\"JIRA_API_TOKEN\": \"your_api_token\"”.",
+      "sources": [
+        "https://github.com/sooperset/mcp-atlassian/blob/a633020248d6e559c5719c6bcb8f668f76273fd9/README.md?plain=1#L42"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "meets",
+      "finding": "The README contains no reference to telemetry or usage collection, and the documented function contacts only the service the user configures. Searched `README.md` for: telemetry, usage statistics, usage stats, we collect, data collection, opt-out, posthog.",
+      "sources": [
+        "https://github.com/sooperset/mcp-atlassian/blob/a633020248d6e559c5719c6bcb8f668f76273fd9/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "partly meets",
+      "finding": "A lockfile (`uv.lock`) is committed. No Dependabot or Renovate configuration file exists at the paths listed in the methodology.",
+      "sources": [
+        "https://github.com/sooperset/mcp-atlassian/blob/a633020248d6e559c5719c6bcb8f668f76273fd9/uv.lock",
+        "https://github.com/sooperset/mcp-atlassian/tree/a633020248d6e559c5719c6bcb8f668f76273fd9"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "does not meet",
+      "finding": "No statement about prompt injection or untrusted content was found in the files searched. Searched `README.md` for: prompt-injection, untrusted, malicious, attacker, adversarial; `SECURITY.md` for: prompt-injection, untrusted.",
+      "sources": [
+        "https://github.com/sooperset/mcp-atlassian/blob/a633020248d6e559c5719c6bcb8f668f76273fd9/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "meets",
+      "finding": "Declared MCP library: fastmcp<4.0.0,>=3.4.7 (also mcp<2.0.0,>=1.27.0). Lower-bound version 3.4.7 of fastmcp (PyPI) was published on 2026-08-10, within the 12 months before 2026-11-14.",
+      "sources": [
+        "https://pypi.org/pypi/mcp-atlassian/json",
+        "https://pypi.org/pypi/fastmcp/json"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [
+    {
+      "id": "GHSA-qx5g-fhgg-wm59",
+      "cve": null,
+      "severity": "low",
+      "published": "2026-11-12",
+      "summary": "Residual JIRA_PROJECTS_FILTER leak through epic cross-reference fetch in get_issue; create_issue's parent field remains unscoped",
+      "affected": "< 0.24.2",
+      "patched": "0.24.2",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-qx5g-fhgg-wm59"
+    },
+    {
+      "id": "GHSA-2w5r-h8v2-c9cx",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-11-08",
+      "summary": "SSE auth gate in v0.23.1 misses most of the message endpoint",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-2w5r-h8v2-c9cx"
+    },
+    {
+      "id": "GHSA-cf68-pxw7-c8fr",
+      "cve": null,
+      "severity": "critical",
+      "published": "2026-11-08",
+      "summary": "Unvalidated `attachment_id` in the Confluence `download_attachment` tool allows authenticated path injection and credential-forwarded fetches(SSRF)",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-cf68-pxw7-c8fr"
+    },
+    {
+      "id": "GHSA-qh7q-jmc7-rc7j",
+      "cve": "CVE-2026-124503",
+      "severity": "high",
+      "published": "2026-11-08",
+      "summary": "mcp-atlassian: upload guard boundary is the process CWD — remote HTTP/SSE deployments started from a wide working directory (systemd default root) restore the arbitrary file read closed by the #1448 batch (CWE-22)",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-qh7q-jmc7-rc7j"
+    },
+    {
+      "id": "GHSA-7876-w4xp-76fv",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-11-08",
+      "summary": "Reflected XSS in standalone OAuth authorization script callback handler",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-7876-w4xp-76fv"
+    },
+    {
+      "id": "GHSA-cffg-pgvw-r443",
+      "cve": null,
+      "severity": "low",
+      "published": "2026-11-08",
+      "summary": "Debug authentication failure logging exposes lowercase and custom secret HTTP headers",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-cffg-pgvw-r443"
+    },
+    {
+      "id": "GHSA-3qhx-3fh4-8w9v",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-11-08",
+      "summary": "Attachment retrieval can forward service credentials to off-origin URLs and custom headers across redirects",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-3qhx-3fh4-8w9v"
+    },
+    {
+      "id": "GHSA-3c6h-qwx8-hjcm",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-11-08",
+      "summary": "SsrfPinningAdapter proxy-stripping trusts user-supplied hostnames, enabling DNS-rebinding SSRF via operator proxy",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-3c6h-qwx8-hjcm"
+    },
+    {
+      "id": "GHSA-pwx2-x8g8-prvm",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-11-08",
+      "summary": "SSRF: Forms API PAT/basic-auth branch bypasses SSRF redirect and DNS-pinning protections",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-pwx2-x8g8-prvm"
+    },
+    {
+      "id": "GHSA-jpxv-989p-f3pf",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-11-08",
+      "summary": "SSRF + credential exfiltration via the request URL header in external-auth mode",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-jpxv-989p-f3pf"
+    },
+    {
+      "id": "GHSA-rh5v-38gg-q3jj",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-11-08",
+      "summary": "Unauthenticated SSRF and authentication-gate bypass via X-Atlassian-{Jira,Confluence}-Url request headers in multi-user HTTP transport",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-rh5v-38gg-q3jj"
+    },
+    {
+      "id": "GHSA-q2h8-fm7r-v7f2",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-11-08",
+      "summary": "jira_add_comment silently posts JSM internal notes as customer-visible, emailing them to the customer",
+      "affected": ">= 0.22.0, <= 0.23.1",
+      "patched": "0.24.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-q2h8-fm7r-v7f2"
+    },
+    {
+      "id": "GHSA-823g-2jmv-9gmc",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-11-08",
+      "summary": "Confluence download paths missing the GHSA-6vmq cwd-root overwrite guard — residual CWE-22/94 gap from CVE-2026-77271",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-823g-2jmv-9gmc"
+    },
+    {
+      "id": "GHSA-5w8q-mmhc-55fp",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-11-08",
+      "summary": "mcp-atlassian OAuth Setup Callback Listens on 0.0.0.0 Enabling Remote Callback Hijacking",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-5w8q-mmhc-55fp"
+    },
+    {
+      "id": "GHSA-xv8h-26ch-vfh9",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-11-08",
+      "summary": "Project/space allowlist enforced on only 2 of ~15 tools: all writes and all read-by-key tools (except Jira get_issue) bypass JIRA_PROJECTS_FILTER / CONFLUENCE_SPACES_FILTER",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-xv8h-26ch-vfh9"
+    },
+    {
+      "id": "GHSA-7vjf-5wh5-87q7",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-11-08",
+      "summary": "JQL/CQL injection bypasses the JIRA_PROJECTS_FILTER / CONFLUENCE_SPACES_FILTER allowlist (access-control bypass)",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-7vjf-5wh5-87q7"
+    },
+    {
+      "id": "GHSA-rwqj-c54w-32jr",
+      "cve": null,
+      "severity": "low",
+      "published": "2026-11-08",
+      "summary": "Sensitive OAuth data written to logs (authorization URL with CSRF state; token-endpoint response body)",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-rwqj-c54w-32jr"
+    },
+    {
+      "id": "GHSA-8ffx-6c2g-75cc",
+      "cve": null,
+      "severity": "low",
+      "published": "2026-11-08",
+      "summary": "Path traversal in jira_remove_issue_link allows issue deletion",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-8ffx-6c2g-75cc"
+    },
+    {
+      "id": "GHSA-85p8-f4j5-j5jp",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-11-08",
+      "summary": "SSRF filter bypass via NAT64 IPv6-transition prefix (64:ff9b::/96) reaches internal / cloud-metadata endpoints",
+      "affected": "< 0.24.1",
+      "patched": "0.24.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-85p8-f4j5-j5jp"
+    },
+    {
+      "id": "GHSA-5j8j-256g-vvp5",
+      "cve": null,
+      "severity": "critical",
+      "published": "2026-08-19",
+      "summary": "Unauthenticated tool execution as operator via `--transport sse` (UserTokenMiddleware never matches SSE paths)",
+      "affected": "<= 0.23.0",
+      "patched": "0.23.1",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-5j8j-256g-vvp5"
+    },
+    {
+      "id": "GHSA-g5r6-gv6m-f5jv",
+      "cve": "CVE-2026-73498",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "Arbitrary file read via missing path validation in confluence_upload_attachment",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-g5r6-gv6m-f5jv"
+    },
+    {
+      "id": "GHSA-489g-7rxv-6c8q",
+      "cve": "CVE-2026-73497",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "DNS-rebinding TOCTOU bypass of the SSRF fix (GHSA-7r34): unauthenticated SSRF to cloud metadata on patched ≥0.17.0",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-489g-7rxv-6c8q"
+    },
+    {
+      "id": "GHSA-72fm-whvq-jghf",
+      "cve": "CVE-2026-77242",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "Incomplete fix for CVE-2026-27826: DNS rebinding bypasses SSRF validation (validated IP not pinned)",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-72fm-whvq-jghf"
+    },
+    {
+      "id": "GHSA-wm45-qh3g-v83f",
+      "cve": "CVE-2026-73496",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "Arbitrary server-side file read via attachment upload in mcp-atlassian",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-wm45-qh3g-v83f"
+    },
+    {
+      "id": "GHSA-3r68-hf9h-887v",
+      "cve": "CVE-2026-77243",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "ENABLED_TOOLS / Toolset authorization bypass in mcp-atlassian",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-3r68-hf9h-887v"
+    },
+    {
+      "id": "GHSA-cc5h-2pwp-pvcc",
+      "cve": "CVE-2026-77248",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "Unauthenticated arbitrary local file read via upload_attachment file_path, chained with missing auth on streamable-http transport",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-cc5h-2pwp-pvcc"
+    },
+    {
+      "id": "GHSA-f6pj-qv47-g96w",
+      "cve": "CVE-2026-77247",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "Arbitrary server-local file upload to Jira/Confluence attachments via unrestricted file_path parameters",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-f6pj-qv47-g96w"
+    },
+    {
+      "id": "GHSA-v9m3-wfh8-5646",
+      "cve": "CVE-2026-77249",
+      "severity": "medium",
+      "published": "2026-07-10",
+      "summary": "Incomplete fix for GHSA-7r34-79r5-rcc9 (CVE-2026-27826): redirect-based SSRF via unhooked requests session in Jira user-permission lookup",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-v9m3-wfh8-5646"
+    },
+    {
+      "id": "GHSA-wv8v-v4c5-v75j",
+      "cve": "CVE-2026-77246",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "MCP HTTP Client Server-Local File Exfiltration via Unvalidated Attachment Upload Path",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-wv8v-v4c5-v75j"
+    },
+    {
+      "id": "GHSA-wrhw-j3f9-8vc6",
+      "cve": "CVE-2026-77244",
+      "severity": "critical",
+      "published": "2026-07-10",
+      "summary": "[mcp-atlassian] Authentication bypass in HTTP transport: AtlassianOpaqueTokenVerifier accepts any non-empty token; server falls back to env-var credentials, allowing unauthenticated use of operator's Jira/Confluence access",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-wrhw-j3f9-8vc6"
+    },
+    {
+      "id": "GHSA-6rrj-86cw-gg9j",
+      "cve": "CVE-2026-77245",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "Multiple vulnerabilities: SSRF via icon_url + attachment URL, JQL injection, Stored XSS",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-6rrj-86cw-gg9j"
+    },
+    {
+      "id": "GHSA-w66g-j6c4-hcfc",
+      "cve": "CVE-2026-77251",
+      "severity": "medium",
+      "published": "2026-07-10",
+      "summary": "Three sub-bugs in JIRA_PROJECTS_FILTER / CONFLUENCE_SPACES_FILTER allow forbidden-project content exfiltration (one LIVE-proven on Atlassian Cloud)",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-w66g-j6c4-hcfc"
+    },
+    {
+      "id": "GHSA-g5xv-mhgm-v5f6",
+      "cve": "CVE-2026-77250",
+      "severity": "medium",
+      "published": "2026-07-10",
+      "summary": "OAuth fallback token storage writes plaintext access and refresh tokens with group-readable permissions",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-g5xv-mhgm-v5f6"
+    },
+    {
+      "id": "GHSA-rqwg-9346-fjjv",
+      "cve": "CVE-2026-77252",
+      "severity": "medium",
+      "published": "2026-07-10",
+      "summary": "JIRA_PROJECTS_FILTER and CONFLUENCE_SPACES_FILTER can be bypassed in search tools",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-rqwg-9346-fjjv"
+    },
+    {
+      "id": "GHSA-vc25-24vv-fxxm",
+      "cve": "CVE-2026-77253",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "Jira and Confluence attachment upload tools can read arbitrary server-local files",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-vc25-24vv-fxxm"
+    },
+    {
+      "id": "GHSA-vc8m-84rp-53hx",
+      "cve": "CVE-2026-77254",
+      "severity": "critical",
+      "published": "2026-07-10",
+      "summary": "Unauthenticated HTTP MCP requests can use globally configured Jira and Confluence credentials",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-vc8m-84rp-53hx"
+    },
+    {
+      "id": "GHSA-hgcf-4mq8-5266",
+      "cve": "CVE-2026-77274",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "SSRF Protection Bypass",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-hgcf-4mq8-5266"
+    },
+    {
+      "id": "GHSA-2xj6-xx86-cwwc",
+      "cve": "CVE-2026-77255",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "Arbitrary File Read & Exfiltration (Confused Deputy) in JIRA update_issue",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-2xj6-xx86-cwwc"
+    },
+    {
+      "id": "GHSA-76pr-5669-3xf5",
+      "cve": "CVE-2026-77256",
+      "severity": "medium",
+      "published": "2026-07-10",
+      "summary": "OAuth refresh-token backup file is world-readable under default Unix umask",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-76pr-5669-3xf5"
+    },
+    {
+      "id": "GHSA-mrq8-fv7v-hhjg",
+      "cve": "CVE-2026-77257",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "HTTP upload tools accept arbitrary server-local file paths",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-mrq8-fv7v-hhjg"
+    },
+    {
+      "id": "GHSA-6cr4-ccf3-x7h4",
+      "cve": "CVE-2026-77259",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "Arbitrary file read via confluence_upload_attachment allows exfiltration of server credentials",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-6cr4-ccf3-x7h4"
+    },
+    {
+      "id": "GHSA-93xw-j965-9mx3",
+      "cve": "CVE-2026-77258",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "Arbitrary file read/exfiltration via upload_attachment missing validate_safe_path()",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-93xw-j965-9mx3"
+    },
+    {
+      "id": "GHSA-f4p7-qx46-wc5j",
+      "cve": "CVE-2026-77260",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "Arbitrary local file READ via unconstrained file_path in upload_attachment (Confluence + Jira) — mirror of patched CVE-2026-27825",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-f4p7-qx46-wc5j"
+    },
+    {
+      "id": "GHSA-6529-c226-h328",
+      "cve": "CVE-2026-77261",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "SSRF redirect protection missing for basic-auth and OAuth authentication branches",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-6529-c226-h328"
+    },
+    {
+      "id": "GHSA-mfv2-4wvm-9pgp",
+      "cve": "CVE-2026-77266",
+      "severity": "medium",
+      "published": "2026-07-10",
+      "summary": "Path traversal in upload_attachment allows arbitrary file read and exfiltration via MCP tool call",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-mfv2-4wvm-9pgp"
+    },
+    {
+      "id": "GHSA-5wf4-jqxh-8gm3",
+      "cve": "CVE-2026-77267",
+      "severity": "medium",
+      "published": "2026-07-10",
+      "summary": "Incomplete fix for CVE-2026-27826 in mcp-atlassian",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-5wf4-jqxh-8gm3"
+    },
+    {
+      "id": "GHSA-p6hp-93wp-fh6p",
+      "cve": "CVE-2026-77262",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "Path Traversal / Arbitrary File Read in confluence_upload_attachment MCP tool (incomplete fix of GHSA-xjgw-4wvw-rgm4)",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-p6hp-93wp-fh6p"
+    },
+    {
+      "id": "GHSA-h7wj-5v37-59r2",
+      "cve": "CVE-2026-77269",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "Path traversal in upload_attachment allows arbitrary file read (incomplete fix for CVE-2026-27825)",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-h7wj-5v37-59r2"
+    },
+    {
+      "id": "GHSA-f26r-j276-ggg4",
+      "cve": "CVE-2026-77270",
+      "severity": "medium",
+      "published": "2026-07-10",
+      "summary": "Arbitrary File Read via Upload Attachment Tools",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-f26r-j276-ggg4"
+    },
+    {
+      "id": "GHSA-49xv-9743-pw8w",
+      "cve": "CVE-2026-77265",
+      "severity": "medium",
+      "published": "2026-07-10",
+      "summary": "SSRF via DNS Rebinding in Header-Based Authentication Flow",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-49xv-9743-pw8w"
+    },
+    {
+      "id": "GHSA-4596-2p6p-28cv",
+      "cve": "CVE-2026-77268",
+      "severity": "medium",
+      "published": "2026-07-10",
+      "summary": "Insecure File Permissions on OAuth Token Storage",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-4596-2p6p-28cv"
+    },
+    {
+      "id": "GHSA-g2r2-3j32-j27x",
+      "cve": "CVE-2026-77272",
+      "severity": "medium",
+      "published": "2026-07-10",
+      "summary": "Reflected XSS in OAuth Setup Callback Handler",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-g2r2-3j32-j27x"
+    },
+    {
+      "id": "GHSA-6vmq-24h2-pj7j",
+      "cve": "CVE-2026-77271",
+      "severity": "high",
+      "published": "2026-07-10",
+      "summary": "Incomplete path traversal fix allows intra-CWD module overwrite and RCE (bypass of GHSA-xjgw-4wvw-rgm4)",
+      "affected": "< 0.22.0",
+      "patched": "0.22.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-6vmq-24h2-pj7j"
+    },
+    {
+      "id": "GHSA-xjgw-4wvw-rgm4",
+      "cve": "CVE-2026-27825",
+      "severity": "critical",
+      "published": "2026-02-24",
+      "summary": "Arbitrary file write leading to arbitrary code execution via unconstrained download_path in confluence_download_attachment",
+      "affected": "<0.17.0",
+      "patched": ">=0.17.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-xjgw-4wvw-rgm4"
+    },
+    {
+      "id": "GHSA-7r34-79r5-rcc9",
+      "cve": "CVE-2026-27826",
+      "severity": "high",
+      "published": "2026-02-24",
+      "summary": "SSRF via unvalidated X-Atlassian-Jira-Url / X-Atlassian-Confluence-Url headers allows unauthenticated access to internal services and cloud metadata",
+      "affected": "<0.17.0",
+      "patched": ">=0.17.0",
+      "url": "https://github.com/sooperset/mcp-atlassian/security/advisories/GHSA-7r34-79r5-rcc9"
+    }
+  ],
+  "third_party_reports": [],
+  "not_reverified": []
+}

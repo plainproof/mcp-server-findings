@@ -1,0 +1,150 @@
+{
+  "slug": "mcp-server-mysql-benborla",
+  "name": "MCP Server for MySQL (benborla)",
+  "repository": "https://github.com/benborla/mcp-server-mysql",
+  "repository_at_selection": null,
+  "path_in_repository": null,
+  "publisher": "benborla",
+  "publisher_account_type": "User",
+  "package": "npm:@benborla29/mcp-server-mysql",
+  "license_spdx": "MIT",
+  "upstream_status": "active",
+  "upstream_status_note": null,
+  "upstream_status_source": [
+    "https://api.github.com/repos/benborla/mcp-server-mysql"
+  ],
+  "latest_release": {
+    "version": "2.0.9",
+    "date": "2026-06-19",
+    "source": "https://registry.npmjs.org/@benborla29/mcp-server-mysql/latest"
+  },
+  "default_branch": "main",
+  "commit": "b9c714e182422b9f18437242b80cf003adf1c7ea",
+  "commit_date": "2026-07-27",
+  "stars": 2218,
+  "verified": "2026-11-14",
+  "outcome": "criteria-partly-met",
+  "outcome_statement": "As of 2026-11-14: meets C3, C4, C5, C6, C7; partly meets C1, C8, C10; does not meet C2, C9.",
+  "results": {
+    "C1": "partly meets",
+    "C2": "does not meet",
+    "C3": "meets",
+    "C4": "meets",
+    "C5": "meets",
+    "C6": "meets",
+    "C7": "meets",
+    "C8": "partly meets",
+    "C9": "does not meet",
+    "C10": "partly meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "partly meets",
+      "finding": "The npm record for @benborla29/mcp-server-mysql@2.0.9 names the repository `git+https://github.com/benborla/mcp-server-mysql.git`. The record carries no provenance attestation (`dist.attestations` is absent).",
+      "sources": [
+        "https://registry.npmjs.org/@benborla29/mcp-server-mysql/latest"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "does not meet",
+      "finding": "GitHub's security-policy page for the repository says \"No security policy detected\" and offers no private vulnerability reporting; the README names no channel for security reports (searched for: security@, vulnerability, responsible disclosure, report security).",
+      "sources": [
+        "https://github.com/benborla/mcp-server-mysql/security/policy",
+        "https://github.com/benborla/mcp-server-mysql/blob/b9c714e182422b9f18437242b80cf003adf1c7ea/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "meets",
+      "finding": "The repository is not archived and the package is not marked deprecated. Latest release 2.0.9 is dated 2026-06-19; the newest commit on `main` is dated 2026-07-27; GitHub reports the last push on 2026-07-27.",
+      "sources": [
+        "https://api.github.com/repos/benborla/mcp-server-mysql",
+        "https://registry.npmjs.org/@benborla29/mcp-server-mysql/latest",
+        "https://github.com/benborla/mcp-server-mysql/commits/main"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "No advisory is published in the repository's advisory list.",
+      "sources": [
+        "https://github.com/benborla/mcp-server-mysql/security/advisories"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "meets",
+      "finding": "The README describes the server as read-only by default, with write operations switched on by environment flags. Quoted: “**Read-only by default** — write operations opt-in via env flags”.",
+      "sources": [
+        "https://github.com/benborla/mcp-server-mysql/blob/b9c714e182422b9f18437242b80cf003adf1c7ea/README.md?plain=1#L19"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "meets",
+      "finding": "Database credentials are supplied through environment variables. Quoted: “\"MYSQL_PASS\": \"your_password\",”.",
+      "sources": [
+        "https://github.com/benborla/mcp-server-mysql/blob/b9c714e182422b9f18437242b80cf003adf1c7ea/README.md?plain=1#L60"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "meets",
+      "finding": "The README contains no reference to telemetry or usage collection, and the documented function contacts only the service the user configures. Searched `README.md` for: telemetry, usage statistics, usage stats, we collect, data collection, opt-out, posthog.",
+      "sources": [
+        "https://github.com/benborla/mcp-server-mysql/blob/b9c714e182422b9f18437242b80cf003adf1c7ea/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "partly meets",
+      "finding": "A lockfile (`package-lock.json`) is committed. No Dependabot or Renovate configuration file exists at the paths listed in the methodology.",
+      "sources": [
+        "https://github.com/benborla/mcp-server-mysql/blob/b9c714e182422b9f18437242b80cf003adf1c7ea/package-lock.json",
+        "https://github.com/benborla/mcp-server-mysql/tree/b9c714e182422b9f18437242b80cf003adf1c7ea"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "does not meet",
+      "finding": "No statement about prompt injection or untrusted content was found in the files searched. Searched `README.md` for: prompt-injection, untrusted, malicious, attacker, adversarial.",
+      "sources": [
+        "https://github.com/benborla/mcp-server-mysql/blob/b9c714e182422b9f18437242b80cf003adf1c7ea/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "partly meets",
+      "finding": "Declared MCP library: @modelcontextprotocol/sdk 1.15.1. Lower-bound version 1.15.1 of @modelcontextprotocol/sdk (npm) was published on 2025-07-10, between 12 and 24 months before 2026-11-14.",
+      "sources": [
+        "https://registry.npmjs.org/@benborla29/mcp-server-mysql/latest",
+        "https://registry.npmjs.org/@modelcontextprotocol/sdk"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [],
+  "third_party_reports": [],
+  "not_reverified": []
+}

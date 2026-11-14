@@ -1,0 +1,149 @@
+{
+  "slug": "sentry-mcp",
+  "name": "Sentry MCP server",
+  "repository": "https://github.com/getsentry/toolkit",
+  "repository_at_selection": "https://github.com/getsentry/sentry-mcp",
+  "path_in_repository": null,
+  "publisher": "getsentry",
+  "publisher_account_type": "Organization",
+  "package": "npm:@sentry/mcp-server; remote:https://mcp.sentry.dev/mcp",
+  "license_spdx": "NOASSERTION",
+  "upstream_status": "renamed",
+  "upstream_status_note": "The repository was renamed from getsentry/sentry-mcp to getsentry/toolkit; the old address redirects. The npm package name is unchanged. Quoted: “ships the same server, bundled without the rest of the CLI, for clients that”.",
+  "upstream_status_source": [
+    "https://github.com/getsentry/toolkit/blob/f8464f814cd3582e9b09abce8452f7e582fce77c/README.md?plain=1#L126"
+  ],
+  "latest_release": {
+    "version": "0.49.0",
+    "date": "2026-11-07",
+    "source": "https://registry.npmjs.org/@sentry/mcp-server/latest"
+  },
+  "default_branch": "main",
+  "commit": "f8464f814cd3582e9b09abce8452f7e582fce77c",
+  "commit_date": "2026-11-14",
+  "stars": 964,
+  "verified": "2026-11-14",
+  "outcome": "criteria-partly-met",
+  "outcome_statement": "As of 2026-11-14: meets C2, C3, C4, C6, C7, C10; partly meets C1, C5, C8; does not meet C9.",
+  "results": {
+    "C1": "partly meets",
+    "C2": "meets",
+    "C3": "meets",
+    "C4": "meets",
+    "C5": "partly meets",
+    "C6": "meets",
+    "C7": "meets",
+    "C8": "partly meets",
+    "C9": "does not meet",
+    "C10": "meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "partly meets",
+      "finding": "The npm record for @sentry/mcp-server@0.49.0 names the repository `git+https://github.com/getsentry/toolkit.git`. The record carries no provenance attestation (`dist.attestations` is absent).",
+      "sources": [
+        "https://registry.npmjs.org/@sentry/mcp-server/latest"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "meets",
+      "finding": "GitHub shows a security policy for the repository, and it describes how to report a vulnerability.",
+      "sources": [
+        "https://github.com/getsentry/toolkit/security/policy"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "meets",
+      "finding": "The repository is not archived and the package is not marked deprecated. Latest release 0.49.0 is dated 2026-11-07; the newest commit on `main` is dated 2026-11-14; GitHub reports the last push on 2026-11-14.",
+      "sources": [
+        "https://api.github.com/repos/getsentry/toolkit",
+        "https://registry.npmjs.org/@sentry/mcp-server/latest",
+        "https://github.com/getsentry/toolkit/commits/main"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "No advisory is published in the repository's advisory list.",
+      "sources": [
+        "https://github.com/getsentry/toolkit/security/advisories"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "partly meets",
+      "finding": "The token scopes listed in the README include write scopes; the README documents limiting calls to one organisation or project and disabling skills. Quoted: “Pass `<org>/` or `<org>/<project>` to limit every call to one organization or”; “You can also disable any other skill to prevent unsupported tools from being”; “project:write”.",
+      "sources": [
+        "https://github.com/getsentry/toolkit/blob/f8464f814cd3582e9b09abce8452f7e582fce77c/README.md?plain=1#L75"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "meets",
+      "finding": "Authentication is by a stored login or a token in an environment variable; the README marks the older command-line token flag as deprecated. Quoted: “SENTRY_AUTH_TOKEN=sentry-user-token npx @sentry/mcp-server@latest”; “`--access-token` / `SENTRY_ACCESS_TOKEN` from older releases still work but are”.",
+      "sources": [
+        "https://github.com/getsentry/toolkit/blob/f8464f814cd3582e9b09abce8452f7e582fce77c/README.md?plain=1#L133"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "meets",
+      "finding": "The README contains no reference to telemetry or usage collection, and the documented function contacts only the service the user configures. Searched `README.md` for: telemetry, usage statistics, usage stats, we collect, data collection, opt-out, posthog.",
+      "sources": [
+        "https://github.com/getsentry/toolkit/blob/f8464f814cd3582e9b09abce8452f7e582fce77c/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "partly meets",
+      "finding": "A lockfile (`pnpm-lock.yaml`) is committed. No Dependabot or Renovate configuration file exists at the paths listed in the methodology.",
+      "sources": [
+        "https://github.com/getsentry/toolkit/blob/f8464f814cd3582e9b09abce8452f7e582fce77c/pnpm-lock.yaml",
+        "https://github.com/getsentry/toolkit/tree/f8464f814cd3582e9b09abce8452f7e582fce77c"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "does not meet",
+      "finding": "No statement about prompt injection or untrusted content was found in the files searched. Searched `README.md` for: prompt-injection, untrusted, malicious, attacker, adversarial.",
+      "sources": [
+        "https://github.com/getsentry/toolkit/blob/f8464f814cd3582e9b09abce8452f7e582fce77c/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "meets",
+      "finding": "Declared MCP library: @modelcontextprotocol/server 2.4.0 (and @modelcontextprotocol/sdk 1.32.2) in the pnpm workspace catalog. Lower-bound version 2.4.0 of @modelcontextprotocol/server (npm) was published on 2026-10-23, within the 12 months before 2026-11-14.",
+      "sources": [
+        "https://github.com/getsentry/toolkit/blob/f8464f814cd3582e9b09abce8452f7e582fce77c/pnpm-workspace.yaml?plain=1#L51",
+        "https://registry.npmjs.org/@modelcontextprotocol/server"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [],
+  "third_party_reports": [],
+  "not_reverified": []
+}

@@ -1,0 +1,261 @@
+{
+  "slug": "mcp-server-kubernetes-flux159",
+  "name": "MCP Server Kubernetes (Flux159)",
+  "repository": "https://github.com/Flux159/mcp-server-kubernetes",
+  "repository_at_selection": null,
+  "path_in_repository": null,
+  "publisher": "Flux159",
+  "publisher_account_type": "User",
+  "package": "npm:mcp-server-kubernetes",
+  "license_spdx": "MIT",
+  "upstream_status": "active",
+  "upstream_status_note": null,
+  "upstream_status_source": [
+    "https://api.github.com/repos/Flux159/mcp-server-kubernetes"
+  ],
+  "latest_release": {
+    "version": "4.2.3",
+    "date": "2026-11-13",
+    "source": "https://registry.npmjs.org/mcp-server-kubernetes/latest"
+  },
+  "default_branch": "main",
+  "commit": "28fa39e2a63332c6c12d78a2ca5209f56519ffaf",
+  "commit_date": "2026-11-13",
+  "stars": 1612,
+  "verified": "2026-11-14",
+  "outcome": "criteria-partly-met",
+  "outcome_statement": "As of 2026-11-14: meets C1, C2, C3, C4, C6, C7, C10; partly meets C5, C8; does not meet C9.",
+  "results": {
+    "C1": "meets",
+    "C2": "meets",
+    "C3": "meets",
+    "C4": "meets",
+    "C5": "partly meets",
+    "C6": "meets",
+    "C7": "meets",
+    "C8": "partly meets",
+    "C9": "does not meet",
+    "C10": "meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "meets",
+      "finding": "The npm record for mcp-server-kubernetes@4.2.3 names the repository `git+https://github.com/Flux159/mcp-server-kubernetes.git` and carries a provenance attestation (`dist.attestations`).",
+      "sources": [
+        "https://registry.npmjs.org/mcp-server-kubernetes/latest"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "meets",
+      "finding": "GitHub shows a security policy for the repository (`SECURITY.md` in the repository), and it describes how to report a vulnerability.",
+      "sources": [
+        "https://github.com/Flux159/mcp-server-kubernetes/security/policy"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "meets",
+      "finding": "The repository is not archived and the package is not marked deprecated. Latest release 4.2.3 is dated 2026-11-13; the newest commit on `main` is dated 2026-11-13; GitHub reports the last push on 2026-11-13.",
+      "sources": [
+        "https://api.github.com/repos/Flux159/mcp-server-kubernetes",
+        "https://registry.npmjs.org/mcp-server-kubernetes/latest",
+        "https://github.com/Flux159/mcp-server-kubernetes/commits/main"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "11 advisories are published in the repository's advisory list; each names a patched version at or below the latest release (4.2.3). Most recent: GHSA-6963-p4fp-2wxw (high, published 2026-10-02, patched in >= 4.1.1).",
+      "sources": [
+        "https://github.com/Flux159/mcp-server-kubernetes/security/advisories",
+        "https://github.com/Flux159/mcp-server-kubernetes/security/advisories/GHSA-6963-p4fp-2wxw"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "partly meets",
+      "finding": "Destructive operations are available unless non-destructive mode is set. Quoted: “You can run the server in a non-destructive mode that disables all destructive operations (delete pods, delete deployments, delete namespaces, etc.):”.",
+      "sources": [
+        "https://github.com/Flux159/mcp-server-kubernetes/blob/28fa39e2a63332c6c12d78a2ca5209f56519ffaf/README.md?plain=1#L351"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "meets",
+      "finding": "The server uses the local kubeconfig. Quoted: “By default, the server loads kubeconfig from `~/.kube/config`.”.",
+      "sources": [
+        "https://github.com/Flux159/mcp-server-kubernetes/blob/28fa39e2a63332c6c12d78a2ca5209f56519ffaf/README.md?plain=1#L33"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "meets",
+      "finding": "OpenTelemetry integration is documented as off by default. Quoted: “This feature is disabled by default and can be enabled via environment variables or Helm configuration.”.",
+      "sources": [
+        "https://github.com/Flux159/mcp-server-kubernetes/blob/28fa39e2a63332c6c12d78a2ca5209f56519ffaf/README.md?plain=1#L219"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "partly meets",
+      "finding": "A lockfile (`bun.lockb`) is committed. No Dependabot or Renovate configuration file exists at the paths listed in the methodology.",
+      "sources": [
+        "https://github.com/Flux159/mcp-server-kubernetes/blob/28fa39e2a63332c6c12d78a2ca5209f56519ffaf/bun.lockb",
+        "https://github.com/Flux159/mcp-server-kubernetes/tree/28fa39e2a63332c6c12d78a2ca5209f56519ffaf"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "does not meet",
+      "finding": "No statement about prompt injection or untrusted content was found in the files searched. Searched `README.md` for: prompt-injection, untrusted, malicious, attacker, adversarial; `SECURITY.md` for: prompt-injection, untrusted.",
+      "sources": [
+        "https://github.com/Flux159/mcp-server-kubernetes/blob/28fa39e2a63332c6c12d78a2ca5209f56519ffaf/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "meets",
+      "finding": "Declared MCP library: @modelcontextprotocol/sdk 1.32.0. Lower-bound version 1.32.0 of @modelcontextprotocol/sdk (npm) was published on 2026-10-02, within the 12 months before 2026-11-14.",
+      "sources": [
+        "https://registry.npmjs.org/mcp-server-kubernetes/latest",
+        "https://registry.npmjs.org/@modelcontextprotocol/sdk"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [
+    {
+      "id": "GHSA-6963-p4fp-2wxw",
+      "cve": "CVE-2026-104776",
+      "severity": "high",
+      "published": "2026-10-02",
+      "summary": "kubectl_patch is missing the remote-transport path guard applied to every sibling tool, allowing server-side arbitrary file read via patchFile",
+      "affected": "<= 4.1.0",
+      "patched": ">= 4.1.1",
+      "url": "https://github.com/Flux159/mcp-server-kubernetes/security/advisories/GHSA-6963-p4fp-2wxw"
+    },
+    {
+      "id": "GHSA-9j3p-gvw3-h8r8",
+      "cve": "CVE-2026-102735",
+      "severity": "high",
+      "published": "2026-09-29",
+      "summary": "Missing DNS Rebinding Protection in SSE Transport Leads to Unauthenticated Remote Cluster Compromise",
+      "affected": ">=0.4.0",
+      "patched": ">= 4.0.8",
+      "url": "https://github.com/Flux159/mcp-server-kubernetes/security/advisories/GHSA-9j3p-gvw3-h8r8"
+    },
+    {
+      "id": "GHSA-c257-86m4-m579",
+      "cve": "CVE-2026-85986",
+      "severity": "medium",
+      "published": "2026-09-04",
+      "summary": "Incomplete fix of GHSA-6mx4-4h42-r8vh: kubectl/helm dangerous-flag guard is bypassed by the attached short-flag form -sURL, re-enabling API-server redirect and operator bearer-token exfiltration",
+      "affected": "<= 3.9.0",
+      "patched": ">= 4.0.6",
+      "url": "https://github.com/Flux159/mcp-server-kubernetes/security/advisories/GHSA-c257-86m4-m579"
+    },
+    {
+      "id": "GHSA-cmgv-rr9q-f7gw",
+      "cve": "CVE-2026-85753",
+      "severity": "medium",
+      "published": "2026-09-04",
+      "summary": "Security Advisory: Arbitrary File Read via Unvalidated valuesFile Path",
+      "affected": "<= 3.8.0",
+      "patched": ">= 4.0.5",
+      "url": "https://github.com/Flux159/mcp-server-kubernetes/security/advisories/GHSA-cmgv-rr9q-f7gw"
+    },
+    {
+      "id": "GHSA-x4x5-wv5h-jjf8",
+      "cve": "CVE-2026-77441",
+      "severity": "high",
+      "published": "2026-08-28",
+      "summary": "Arbitrary Local File Read via `kubectl_create` `--from-file`",
+      "affected": "<= 3.9.1",
+      "patched": ">= 4.0.2",
+      "url": "https://github.com/Flux159/mcp-server-kubernetes/security/advisories/GHSA-x4x5-wv5h-jjf8"
+    },
+    {
+      "id": "GHSA-jjrr-53h8-h34w",
+      "cve": "CVE-2026-75603",
+      "severity": "high",
+      "published": "2026-08-28",
+      "summary": "Bare-positional flag injection in 14 kubectl/helm tools enables bearer token exfiltration",
+      "affected": "<= 3.8.0",
+      "patched": ">= 3.9.0",
+      "url": "https://github.com/Flux159/mcp-server-kubernetes/security/advisories/GHSA-jjrr-53h8-h34w"
+    },
+    {
+      "id": "GHSA-6mx4-4h42-r8vh",
+      "cve": "CVE-2026-47250",
+      "severity": "medium",
+      "published": "2026-05-22",
+      "summary": "kubectl-generic flag injection enables Kubernetes bearer token exfiltration",
+      "affected": "≤ 3.6.2 (all versions)",
+      "patched": ">= 3.7.0",
+      "url": "https://github.com/Flux159/mcp-server-kubernetes/security/advisories/GHSA-6mx4-4h42-r8vh"
+    },
+    {
+      "id": "GHSA-cr22-wjx7-2w6m",
+      "cve": "CVE-2026-46519",
+      "severity": "high",
+      "published": "2026-05-17",
+      "summary": "Tool Access Control Bypass: Presentation-Layer Filtering Without Execution-Layer Enforcement",
+      "affected": "< 3.6.0",
+      "patched": ">= 3.6.0",
+      "url": "https://github.com/Flux159/mcp-server-kubernetes/security/advisories/GHSA-cr22-wjx7-2w6m"
+    },
+    {
+      "id": "GHSA-4xqg-gf5c-ghwq",
+      "cve": "CVE-2026-39884",
+      "severity": "high",
+      "published": "2026-04-14",
+      "summary": "Argument Injection in port_forward tool via space-splitting",
+      "affected": "<= 3.4.0",
+      "patched": ">= 3.5.0",
+      "url": "https://github.com/Flux159/mcp-server-kubernetes/security/advisories/GHSA-4xqg-gf5c-ghwq"
+    },
+    {
+      "id": "GHSA-wvxp-jp4w-w8wg",
+      "cve": "CVE-2025-66404",
+      "severity": "high",
+      "published": "2025-12-03",
+      "summary": "mcp-server-kubernetes potential security issue in exec_in_pod tool",
+      "affected": "<= v2.9.7",
+      "patched": ">= v2.9.8",
+      "url": "https://github.com/Flux159/mcp-server-kubernetes/security/advisories/GHSA-wvxp-jp4w-w8wg"
+    },
+    {
+      "id": "GHSA-gjv4-ghm7-q58q",
+      "cve": "CVE-2025-53355",
+      "severity": "high",
+      "published": "2025-07-08",
+      "summary": "mcp-server-kubernetes vulnerable to command injection in several tools",
+      "affected": "<=2.4.9; <=v2.4.9",
+      "patched": ">=2.5.0, >=v2.5.0",
+      "url": "https://github.com/Flux159/mcp-server-kubernetes/security/advisories/GHSA-gjv4-ghm7-q58q"
+    }
+  ],
+  "third_party_reports": [],
+  "not_reverified": []
+}

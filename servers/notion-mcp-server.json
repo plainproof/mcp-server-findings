@@ -1,0 +1,150 @@
+{
+  "slug": "notion-mcp-server",
+  "name": "Notion MCP Server (self-hosted)",
+  "repository": "https://github.com/makenotion/notion-mcp-server",
+  "repository_at_selection": null,
+  "path_in_repository": null,
+  "publisher": "makenotion",
+  "publisher_account_type": "Organization",
+  "package": "npm:@notionhq/notion-mcp-server",
+  "license_spdx": "MIT",
+  "upstream_status": "unmaintained-per-publisher",
+  "upstream_status_note": "The README says this self-hosted server is no longer actively maintained or supported and points to the publisher's hosted server. The latest release (2.6.1) is dated 2026-10-29.",
+  "upstream_status_source": [
+    "https://api.github.com/repos/makenotion/notion-mcp-server"
+  ],
+  "latest_release": {
+    "version": "2.6.1",
+    "date": "2026-10-29",
+    "source": "https://registry.npmjs.org/@notionhq/notion-mcp-server/latest"
+  },
+  "default_branch": "main",
+  "commit": "cf16e5c20bfbfb98ecec1227f210ef0ae3abebe5",
+  "commit_date": "2026-10-29",
+  "stars": 4707,
+  "verified": "2026-11-14",
+  "outcome": "criteria-not-met",
+  "outcome_statement": "As of 2026-11-14: meets C1, C4, C6, C7, C10; partly meets C5, C8, C9; does not meet C2, C3.",
+  "results": {
+    "C1": "meets",
+    "C2": "does not meet",
+    "C3": "does not meet",
+    "C4": "meets",
+    "C5": "partly meets",
+    "C6": "meets",
+    "C7": "meets",
+    "C8": "partly meets",
+    "C9": "partly meets",
+    "C10": "meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "meets",
+      "finding": "The npm record for @notionhq/notion-mcp-server@2.6.1 names the repository `git+ssh://git@github.com/makenotion/notion-mcp-server.git` and carries a provenance attestation (`dist.attestations`).",
+      "sources": [
+        "https://registry.npmjs.org/@notionhq/notion-mcp-server/latest"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "does not meet",
+      "finding": "GitHub's security-policy page for the repository says \"No security policy detected\" and offers no private vulnerability reporting; the README names no channel for security reports (searched for: security@, vulnerability, responsible disclosure, report security).",
+      "sources": [
+        "https://github.com/makenotion/notion-mcp-server/security/policy",
+        "https://github.com/makenotion/notion-mcp-server/blob/cf16e5c20bfbfb98ecec1227f210ef0ae3abebe5/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "does not meet",
+      "finding": "The repository is not archived, but the README says the project is no longer maintained or supported. Quoted: “server implementation that is no longer actively maintained or supported.”. Latest release 2.6.1 is dated 2026-10-29; the newest commit on `main` is dated 2026-10-29; GitHub reports the last push on 2026-10-29.",
+      "sources": [
+        "https://github.com/makenotion/notion-mcp-server/blob/cf16e5c20bfbfb98ecec1227f210ef0ae3abebe5/README.md?plain=1#L7",
+        "https://api.github.com/repos/makenotion/notion-mcp-server",
+        "https://registry.npmjs.org/@notionhq/notion-mcp-server/latest"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "No advisory is published in the repository's advisory list.",
+      "sources": [
+        "https://github.com/makenotion/notion-mcp-server/security/advisories"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "partly meets",
+      "finding": "The exposed tools include writes; the README documents restricting them through the capabilities of the integration token. Quoted: “For example, you can create a read-only integration token by giving only \"Read content\" access from the \"Configuration\" tab:”.",
+      "sources": [
+        "https://github.com/makenotion/notion-mcp-server/blob/cf16e5c20bfbfb98ecec1227f210ef0ae3abebe5/README.md?plain=1#L112"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "meets",
+      "finding": "The integration token is supplied through an environment variable. Quoted: “\"NOTION_TOKEN\": \"ntn_****\"”.",
+      "sources": [
+        "https://github.com/makenotion/notion-mcp-server/blob/cf16e5c20bfbfb98ecec1227f210ef0ae3abebe5/README.md?plain=1#L147"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "meets",
+      "finding": "The README contains no reference to telemetry or usage collection, and the documented function contacts only the service the user configures. Searched `README.md` for: telemetry, usage statistics, usage stats, we collect, data collection, opt-out, posthog.",
+      "sources": [
+        "https://github.com/makenotion/notion-mcp-server/blob/cf16e5c20bfbfb98ecec1227f210ef0ae3abebe5/README.md"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "partly meets",
+      "finding": "A lockfile (`package-lock.json`) is committed. No Dependabot or Renovate configuration file exists at the paths listed in the methodology.",
+      "sources": [
+        "https://github.com/makenotion/notion-mcp-server/blob/cf16e5c20bfbfb98ecec1227f210ef0ae3abebe5/package-lock.json",
+        "https://github.com/makenotion/notion-mcp-server/tree/cf16e5c20bfbfb98ecec1227f210ef0ae3abebe5"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "partly meets",
+      "finding": "The README carries a general caution about exposing workspace data to language models; it does not name prompt injection or untrusted content. Quoted: “there is a non-zero risk to workspace data by exposing it to LLMs”.",
+      "sources": [
+        "https://github.com/makenotion/notion-mcp-server/blob/cf16e5c20bfbfb98ecec1227f210ef0ae3abebe5/README.md?plain=1#L110"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "meets",
+      "finding": "Declared MCP library: @modelcontextprotocol/sdk ^1.32.2. Lower-bound version 1.32.2 of @modelcontextprotocol/sdk (npm) was published on 2026-10-23, within the 12 months before 2026-11-14.",
+      "sources": [
+        "https://registry.npmjs.org/@notionhq/notion-mcp-server/latest",
+        "https://registry.npmjs.org/@modelcontextprotocol/sdk"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [],
+  "third_party_reports": [],
+  "not_reverified": []
+}

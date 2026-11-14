@@ -1,0 +1,461 @@
+{
+  "slug": "gitlab-mcp-zereight",
+  "name": "GitLab MCP (zereight)",
+  "repository": "https://github.com/zereight/gitlab-mcp",
+  "repository_at_selection": null,
+  "path_in_repository": null,
+  "publisher": "zereight",
+  "publisher_account_type": "User",
+  "package": "npm:@zereight/mcp-gitlab",
+  "license_spdx": "MIT",
+  "upstream_status": "active",
+  "upstream_status_note": null,
+  "upstream_status_source": [
+    "https://api.github.com/repos/zereight/gitlab-mcp"
+  ],
+  "latest_release": {
+    "version": "2.3.27",
+    "date": "2026-11-13",
+    "source": "https://registry.npmjs.org/@zereight/mcp-gitlab/latest"
+  },
+  "default_branch": "main",
+  "commit": "fdd70b75a1641034f496729b00e6ff8b0f0681b2",
+  "commit_date": "2026-11-14",
+  "stars": 2105,
+  "verified": "2026-11-14",
+  "outcome": "criteria-met",
+  "outcome_statement": "As of 2026-11-14: meets C1, C2, C3, C4, C6, C7, C8, C9, C10; partly meets C5.",
+  "results": {
+    "C1": "meets",
+    "C2": "meets",
+    "C3": "meets",
+    "C4": "meets",
+    "C5": "partly meets",
+    "C6": "meets",
+    "C7": "meets",
+    "C8": "meets",
+    "C9": "meets",
+    "C10": "meets"
+  },
+  "findings": [
+    {
+      "criterion": "C1",
+      "title": "Source and release provenance",
+      "result": "meets",
+      "finding": "The npm record for @zereight/mcp-gitlab@2.3.27 names the repository `git+https://github.com/zereight/gitlab-mcp.git` and carries a provenance attestation (`dist.attestations`).",
+      "sources": [
+        "https://registry.npmjs.org/@zereight/mcp-gitlab/latest"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C2",
+      "title": "Published security policy",
+      "result": "meets",
+      "finding": "GitHub shows a security policy for the repository (`SECURITY.md` in the repository), and it describes how to report a vulnerability.",
+      "sources": [
+        "https://github.com/zereight/gitlab-mcp/security/policy"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C3",
+      "title": "Maintenance status",
+      "result": "meets",
+      "finding": "The repository is not archived and the package is not marked deprecated. Latest release 2.3.27 is dated 2026-11-13; the newest commit on `main` is dated 2026-11-14; GitHub reports the last push on 2026-11-14.",
+      "sources": [
+        "https://api.github.com/repos/zereight/gitlab-mcp",
+        "https://registry.npmjs.org/@zereight/mcp-gitlab/latest",
+        "https://github.com/zereight/gitlab-mcp/commits/main"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C4",
+      "title": "Published advisories",
+      "result": "meets",
+      "finding": "31 advisories are published in the repository's advisory list; each names a patched version at or below the latest release (2.3.27). Most recent: GHSA-mfp5-5gv8-2ph2 (high, published 2026-11-13, patched in 2.3.27).",
+      "sources": [
+        "https://github.com/zereight/gitlab-mcp/security/advisories",
+        "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-mfp5-5gv8-2ph2"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C5",
+      "title": "Documented scope controls",
+      "result": "partly meets",
+      "finding": "The README documents permission modes; the default is `full`. Quoted: “`--permission-mode` - Permission level: `readonly`, `modify` (no delete or teardown tools), or `full` (replaces `GITLAB_PERMISSION_MODE`, default `full`)”.",
+      "sources": [
+        "https://github.com/zereight/gitlab-mcp/blob/fdd70b75a1641034f496729b00e6ff8b0f0681b2/README.md?plain=1#L299"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C6",
+      "title": "Credential handling in the documented setup",
+      "result": "meets",
+      "finding": "The token is supplied through an environment variable, or OAuth. Quoted: “read -rs GITLAB_PERSONAL_ACCESS_TOKEN && export GITLAB_PERSONAL_ACCESS_TOKEN”.",
+      "sources": [
+        "https://github.com/zereight/gitlab-mcp/blob/fdd70b75a1641034f496729b00e6ff8b0f0681b2/README.md?plain=1#L51"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C7",
+      "title": "Telemetry and outbound data, as documented",
+      "result": "meets",
+      "finding": "The README describes an opt-in local audit log; no usage collection by the publisher is described. Quoted: “Opt-in NDJSON audit log of MCP tool calls for SIEM ingestion”.",
+      "sources": [
+        "https://github.com/zereight/gitlab-mcp/blob/fdd70b75a1641034f496729b00e6ff8b0f0681b2/README.md?plain=1#L315"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C8",
+      "title": "Dependency management files",
+      "result": "meets",
+      "finding": "A lockfile (`package-lock.json`) and an update configuration (`.github/dependabot.yml`) are committed.",
+      "sources": [
+        "https://github.com/zereight/gitlab-mcp/blob/fdd70b75a1641034f496729b00e6ff8b0f0681b2/package-lock.json",
+        "https://github.com/zereight/gitlab-mcp/blob/fdd70b75a1641034f496729b00e6ff8b0f0681b2/.github/dependabot.yml"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C9",
+      "title": "Documentation of untrusted-content risk",
+      "result": "meets",
+      "finding": "The README names prompt injection as a risk for the raw API tool and documents that the tool is only enabled explicitly. Quoted: “Prompt injection can drive it. Enable it only by listing `api` in `GITLAB_TOOLSETS`.”.",
+      "sources": [
+        "https://github.com/zereight/gitlab-mcp/blob/fdd70b75a1641034f496729b00e6ff8b0f0681b2/README.md?plain=1#L135"
+      ],
+      "verified": "2026-11-14"
+    },
+    {
+      "criterion": "C10",
+      "title": "Currency of the declared MCP library",
+      "result": "meets",
+      "finding": "Declared MCP library: @modelcontextprotocol/sdk ^1.29.0. Lower-bound version 1.29.0 of @modelcontextprotocol/sdk (npm) was published on 2026-03-30, within the 12 months before 2026-11-14.",
+      "sources": [
+        "https://registry.npmjs.org/@zereight/mcp-gitlab/latest",
+        "https://registry.npmjs.org/@modelcontextprotocol/sdk"
+      ],
+      "verified": "2026-11-14"
+    }
+  ],
+  "advisories": [
+    {
+      "id": "GHSA-mfp5-5gv8-2ph2",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-11-13",
+      "summary": "Command injection in @zereight/mcp-gitlab CLI replay command",
+      "affected": ">= 2.1.69, <= 2.3.26",
+      "patched": "2.3.27",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-mfp5-5gv8-2ph2"
+    },
+    {
+      "id": "GHSA-wgqr-h4c5-gw82",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-11-13",
+      "summary": "ReDoS in @zereight/mcp-gitlab diff filtering can block the entire server",
+      "affected": ">= 1.0.60, <= 2.3.26",
+      "patched": "2.3.27",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-wgqr-h4c5-gw82"
+    },
+    {
+      "id": "GHSA-582m-wh92-4vhr",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-11-12",
+      "summary": "GITLAB_PERMISSION_MODE=modify delete guard bypassed by a comma between mutation variables and the selection set",
+      "affected": "<= 2.3.25",
+      "patched": "2.3.26",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-582m-wh92-4vhr"
+    },
+    {
+      "id": "GHSA-m9qr-545q-8xc6",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-10-30",
+      "summary": "Docker image ships Node.js 22.21.1, vulnerable to CVE-2026-111497 (Brotli decoder RCE), reachable before authentication",
+      "affected": "<= 2.3.15",
+      "patched": "2.3.16",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-m9qr-545q-8xc6"
+    },
+    {
+      "id": "GHSA-rr94-3mff-76gg",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-10-27",
+      "summary": "Startup version check sends GitLab credentials from the environment to a registry chosen by the working directory's `.npmrc`",
+      "affected": ">= 2.1.55, <= 2.3.11",
+      "patched": "2.3.12",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-rr94-3mff-76gg"
+    },
+    {
+      "id": "GHSA-2p72-j379-vmm3",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-10-25",
+      "summary": "Missing session owner binding in REMOTE_AUTHORIZATION mode and GITLAB_DOWNLOAD_DIR confinement/exclusive-write bypass in download_job_artifacts",
+      "affected": "<= 2.3.9",
+      "patched": "2.3.10",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-2p72-j379-vmm3"
+    },
+    {
+      "id": "GHSA-q96h-922g-m3h3",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-10-24",
+      "summary": "Remote download capability URLs bypass the per-session project allowlist (ENABLE_DYNAMIC_PROJECT_SCOPE)",
+      "affected": ">= 2.1.58, <= 2.3.7",
+      "patched": "2.3.8",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-q96h-922g-m3h3"
+    },
+    {
+      "id": "GHSA-5xhm-p3jx-2fmc",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-10-23",
+      "summary": "gitlab_api_request: project allowlist is silently skipped for any GitLab API path that has no parseable project ID",
+      "affected": ">= 2.2.5, <= 2.3.6",
+      "patched": "2.3.7",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-5xhm-p3jx-2fmc"
+    },
+    {
+      "id": "GHSA-g4cw-m236-q72h",
+      "cve": null,
+      "severity": "low",
+      "published": "2026-10-15",
+      "summary": "Session IDs are logged in plaintext and MCP OAuth sessions are not bound to their owner",
+      "affected": ">= 2.0.8, <= 2.2.6",
+      "patched": "2.3.0",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-g4cw-m236-q72h"
+    },
+    {
+      "id": "GHSA-2jv7-p2g4-9f2h",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-10-15",
+      "summary": "GITLAB_OAUTH_ALLOWED_GROUPS is only checked at OAuth code exchange",
+      "affected": ">= 2.1.19, <= 2.2.6",
+      "patched": "2.3.0",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-2jv7-p2g4-9f2h"
+    },
+    {
+      "id": "GHSA-3gfg-wh5g-cf74",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-10-15",
+      "summary": "GITLAB_TOOL_POLICY_HIDDEN makes tools from disabled toolsets callable",
+      "affected": ">= 2.1.0, <= 2.2.6",
+      "patched": "2.3.0",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-3gfg-wh5g-cf74"
+    },
+    {
+      "id": "GHSA-64g9-hrwx-9g6m",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-10-15",
+      "summary": "Local OAuth callback server returns GitLab tokens to any local caller",
+      "affected": ">= 2.0.11, <= 2.2.6",
+      "patched": "2.3.0",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-64g9-hrwx-9g6m"
+    },
+    {
+      "id": "GHSA-ffr3-5f57-gf93",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-10-15",
+      "summary": "Project allowlist bypass through target_project_id and work item note emoji tools",
+      "affected": ">= 1.0.77, <= 2.2.6",
+      "patched": "2.3.0",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-ffr3-5f57-gf93"
+    },
+    {
+      "id": "GHSA-vhp9-2xfv-rrfv",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-10-15",
+      "summary": "download_attachment overwrites files in the working directory, including in readonly mode",
+      "affected": ">= 1.0.77, <= 2.2.6",
+      "patched": "2.3.0",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-vhp9-2xfv-rrfv"
+    },
+    {
+      "id": "GHSA-5w3p-qj7g-79v5",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-10-15",
+      "summary": "OAuth callback proxy lets any registered client receive a victim's GitLab tokens",
+      "affected": ">= 2.1.4, <= 2.2.6",
+      "patched": "2.3.0",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-5w3p-qj7g-79v5"
+    },
+    {
+      "id": "GHSA-qcj2-qcc2-5fg4",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-10-14",
+      "summary": "Project Scope Authorization Bypass",
+      "affected": ">= 2.1.58, <= 2.2.5",
+      "patched": "2.2.6",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-qcj2-qcc2-5fg4"
+    },
+    {
+      "id": "GHSA-7cr4-55f8-p36f",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-09-23",
+      "summary": "GITLAB_PERMISSION_MODE=modify delete-ban bypassed: comma-separated GraphQL operations make mutations invisible to graphqlQueryContainsDeleteOperation (distinct mechanism from GHSA-f492)",
+      "affected": "<= 2.1.63",
+      "patched": "2.1.65",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-7cr4-55f8-p36f"
+    },
+    {
+      "id": "GHSA-v279-9wq4-63rm",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-09-23",
+      "summary": "GITLAB_PERMISSION_MODE=modify exposes destructive stop/cancel pipeline and environment tools missing from the deleteTools registry (REST-tool layer sibling of GHSA-f492)",
+      "affected": "<= 2.1.63",
+      "patched": "2.1.65",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-v279-9wq4-63rm"
+    },
+    {
+      "id": "GHSA-m682-5gg2-5rc9",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-09-23",
+      "summary": "encodeGitLabPath never blocks '../': GHSA-4rm9 patch bypass leads to path traversal (4 call sites)",
+      "affected": ">= 0.0.1",
+      "patched": "2.1.65",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-m682-5gg2-5rc9"
+    },
+    {
+      "id": "GHSA-cjfw-chc3-4r4v",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-09-23",
+      "summary": "Server GitLab credential exfiltration: Private-Token/JOB-TOKEN forwarded across an unvalidated download redirect",
+      "affected": "<= 2.1.62",
+      "patched": "2.1.65",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-cjfw-chc3-4r4v"
+    },
+    {
+      "id": "GHSA-frxm-jmmc-j2xh",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-09-23",
+      "summary": "SSRF: download proxy follows an attacker-set GitLab redirect to internal hosts without re-validating the target",
+      "affected": "<= 2.1.62",
+      "patched": "2.1.65",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-frxm-jmmc-j2xh"
+    },
+    {
+      "id": "GHSA-ph8m-54rc-77fp",
+      "cve": null,
+      "severity": "medium",
+      "published": "2026-09-23",
+      "summary": "Session-exhaustion DoS in @zereight/mcp-gitlab SSE transport: /sse lacks the session cap, rate limit, and idle timeout",
+      "affected": "<= 2.1.62",
+      "patched": "2.1.65",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-ph8m-54rc-77fp"
+    },
+    {
+      "id": "GHSA-f492-qxqp-m79r",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-09-23",
+      "summary": "GITLAB_PERMISSION_MODE=modify delete-ban bypassed: destructive GraphQL mutations with non-delete verb names (environmentStop, clusterAgentTokenRevoke, pipelineCancel) pass graphqlQueryContainsDeleteOperation and execute against the operator's GitLab instance",
+      "affected": ">= 2.1.30",
+      "patched": "2.1.65",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-f492-qxqp-m79r"
+    },
+    {
+      "id": "GHSA-24vp-rch2-gjqq",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-09-19",
+      "summary": "Unauthenticated session exhaustion denies service to legitimate clients",
+      "affected": "< 2.1.30",
+      "patched": "2.1.30",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-24vp-rch2-gjqq"
+    },
+    {
+      "id": "GHSA-64mg-3vx9-g74j",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-09-19",
+      "summary": "execute_graphql defeats read-only mode and GITLAB_ALLOWED_PROJECT_IDS",
+      "affected": "< 2.1.30",
+      "patched": "2.1.30",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-64mg-3vx9-g74j"
+    },
+    {
+      "id": "GHSA-4rm9-rfp2-j39q",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-07-19",
+      "summary": "Path escape in download_release_asset via direct_asset_path enables same-host project-scope bypass",
+      "affected": "< 2.1.41",
+      "patched": "2.1.41",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-4rm9-rfp2-j39q"
+    },
+    {
+      "id": "GHSA-7c3w-fxgh-frc7",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-07-19",
+      "summary": "Path traversal in job_id turns a job tool into an arbitrary GitLab API request under the operator token",
+      "affected": "< 2.1.32",
+      "patched": "2.1.32",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-7c3w-fxgh-frc7"
+    },
+    {
+      "id": "GHSA-5648-rgj9-v224",
+      "cve": null,
+      "severity": "high",
+      "published": "2026-07-05",
+      "summary": "Multiple safety-control bypasses in @zereight/mcp-gitlab: execute_graphql read-only + allow-list bypass, unauthenticated transports, session-exhaustion DoS",
+      "affected": "< 2.1.30",
+      "patched": "2.1.30",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-5648-rgj9-v224"
+    },
+    {
+      "id": "GHSA-vmp7-252j-cwp7",
+      "cve": "CVE-2026-61568",
+      "severity": "critical",
+      "published": "2026-07-03",
+      "summary": "DNS rebinding reaches local Streamable HTTP MCP transport",
+      "affected": "< 2.1.30",
+      "patched": "2.1.30",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-vmp7-252j-cwp7"
+    },
+    {
+      "id": "GHSA-2h44-8472-frjj",
+      "cve": "CVE-2026-61559",
+      "severity": "critical",
+      "published": "2026-07-01",
+      "summary": "Server-Side Request Forgery (SSRF) in zereight/mcp-gitlab",
+      "affected": ">= 0.0.1",
+      "patched": "2.1.27",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-2h44-8472-frjj"
+    },
+    {
+      "id": "GHSA-cv3r-c5h8-f4g5",
+      "cve": "CVE-2026-61560",
+      "severity": "critical",
+      "published": "2026-06-22",
+      "summary": "Unauthenticated arbitrary file read via `upload_markdown` enables PAT exfiltration and full account takeover",
+      "affected": "< 2.1.27",
+      "patched": "2.1.27",
+      "url": "https://github.com/zereight/gitlab-mcp/security/advisories/GHSA-cv3r-c5h8-f4g5"
+    }
+  ],
+  "third_party_reports": [],
+  "not_reverified": []
+}
